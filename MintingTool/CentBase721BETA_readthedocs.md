@@ -25,9 +25,9 @@ This base ERC721 smart contract is used by the CentArt NFT Marketplace `NFT Mint
 
 - [Related Contracts](#related-contracts)
 - [Contract Methods](#contract-methods)
-  - [mint()](#mint-a-new-token)
-  - [batchMint()](#mint-a-batch-of-nft's)
-  - [deployPaymentSplitter()](#split-royalty-between-multiple-addresses)
+  - [`mint`](#mint-a-new-token)
+  - [`batchMint`](#mint-a-batch-of-nft's)
+  - [`deployPaymentSplitter`](#split-royalty-between-multiple-addresses)
 
 ---
 
@@ -35,15 +35,15 @@ This base ERC721 smart contract is used by the CentArt NFT Marketplace `NFT Mint
 
 These smart contracts are part of the Centaurify Marketplace platform.
 
-- [CentBase721BETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/centaurify_platform_w/unit_tests/contracts/NFT/Minting/CentBase721BETA.sol)
-- [CentBaseMarketPlaceBETA.sol](https://github.dev/CentaurifyOrg/smart_contracts/blob/centaurify_platform_w/unit_tests/contracts/NFT/Marketplace/%20CentBaseMarketPlaceBETA.sol#L1)
-- [CentBaseWhitelistBETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/centaurify_platform_w/unit_tests/contracts/NFT/Whitelist/CentBaseWhitelistBETA.sol)
+- [CentBase721BETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Minting/CentBase721BETA.sol)
+- [CentBaseMarketPlaceBETA.sol](https://github.dev/CentaurifyOrg/smart_contracts/blob/main/unit_tests/contracts/NFT/Marketplace/%20CentBaseMarketPlaceBETA.sol#L1)
+- [CentBaseWhitelistBETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Whitelist/CentBaseWhitelistBETA.sol)
 
 ---
 
 ## Contract Methods
 
-These methods below can only be called by a **whitelisted** account ( _ie. minting tool_ ) during the BETA release.
+_These methods below can only be called by a **whitelisted** account ( ie. minting tool ) during the BETA release._
 
 ### **Mint a new token**  
 
@@ -147,6 +147,6 @@ function deployPaymentSplitter(
 | :--------            | :-------                        |:-------------------------                        |
 | `NewRoyaltySplitter` | `RoyaltySplitter, RoyaltyIndex` | _Emitted when a new RoyaltySplitter is deployed._|
 
-## Contributers
+## Authors
 
-- [@Dadogg80](https://github.com/Dadogg80) - [Viken Blockchain Solutions](https://vikenblockchain.com/) 
+- [@dadogg80](https://github.com/Dadogg80) - [Viken Blockchain Solutions](https://vikenblockchain.com/) 
