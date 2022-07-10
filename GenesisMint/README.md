@@ -31,7 +31,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ## Documentation
 
-- [Read The Docs](GenesisMint/ReadTheDocs_Genesis_Mint.md#read-the-docs---genesis-mint "Genesis Mint README")
+- [Read The Docs](ReadTheDocs_Genesis_Mint.md#read-the-docs---genesis-mint "Genesis Mint README")
 
 
 ## Instructions
