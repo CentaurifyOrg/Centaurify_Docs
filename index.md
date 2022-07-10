@@ -1,5 +1,7 @@
 # ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)  
 
+Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.
+
 ## CENTAURIFY DOCS
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
