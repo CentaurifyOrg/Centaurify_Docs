@@ -1,5 +1,10 @@
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)  
 
+| Product      | Type               | Description                |
+| :--------    | :-------           | :------------------------- |
+| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP |
+
+---
 
 # README - Genesis Mint Smart Contract
 
