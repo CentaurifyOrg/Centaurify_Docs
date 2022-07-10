@@ -1,4 +1,3 @@
-
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)  
 
 
@@ -12,24 +11,106 @@ This README is the documentation for the [GenesisMint](GenesisMint.sol) smart co
 
 ## Introduction
 
-Give a intorduction to the Genesis mint, GoldenTicket and PFPs.
+Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.
+
 ## Table of contents
 
 - [README - Genesis Mint Smart Contract](#readme---genesis-mint-smart-contract)
   - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
-  - [Supported Features](#supported-features)
-  - [Related Contracts](#related-contracts)
   - [Documentation](#documentation)
+  - [Instructions](#instructions)
+    - [Clone the project](#clone-the-project)
+    - [Install instructions](#install-instructions)
+    - [Compile the smart contracts](#compile-the-smart-contracts)
+    - [Deploy the smart contracts](#deploy-the-smart-contracts)
+    - [Test the smart contracts](#test-the-smart-contracts)
+  - [Related Contracts](#related-contracts)
+  - [🧑‍⚖️ Authors](#️-authors)
 
-## Supported Features
 
-- _Build on the ERC721A smart contract from [ChiruLabs](https://www.erc721a.org/) for cheaper batch minting and better fee optimization_
-- _Support ERC2981 - Royalty Standard with the { [royaltyInfo](https://eips.ethereum.org/EIPS/eip-2981) } method._
-- _Support OpenSea's { [contractURI](https://docs.opensea.io/docs/contract-level-metadata) } method for query contract metadata._
-- _Supports whitelisted accounts by using MerkleTree validation._
-- _Supports REVEAL feature._
-- _Supports Early reveal feature._  
+## Documentation
+
+- [Read The Docs](/GenesisMint/ReadTheDocs_Genesis_Mint.md "Genesis Mint README")
+
+
+## Instructions
+
+
+### Clone the project
+
+  ```bash
+    git clone https://github.com/CentaurifyOrg/smart_contracts.git
+  ```
+
+- Go to the project directory
+
+  ```bash
+    cd smart_contracts
+  ```
+
+
+### Install instructions
+
+- Install all the dependencies.  
+  
+  ```bash
+    yarn
+  ```  
+
+### Compile the smart contracts
+
+*Contracts are **auto** compiled on **deployment** and **unit-testing**.*  
+
+- Manually re-compile the contracts only after changes to the smart-contracts.  
+
+  ```bash
+    yarn compile
+  ```  
+
+
+### Deploy the smart contracts
+
+- To deploy the smart contracts in a local test enviroment, you will need two terminal tabs/windows open. 
+
+  **In terminal one:**  
+
+  - Spin up a local node.  
+  
+  ```bash
+    yarn ganache
+  ```
+
+  **In terminal two:**  
+
+  - deploy **GenesisMint** smart-contract.  
+  
+  ```bash
+    yarn deploy_local_genesis
+  ```
+
+
+### Test the smart contracts
+
+*Smart contracts are **auto** compiled and deployed to a local test enviroment.*   
+
+- To run unit-tests, you will need two terminal tabs/windows open.
+
+  **In terminal one:**
+  - Start a local node.
+ 
+  ```bash
+    yarn ganache
+  ```
+  
+  **In terminal two:**
+  - Run **Genesis Mint** unit-tests.  
+  
+  ```bash
+    yarn test_local_genesis
+  ```
+
+_______________________________________
 
 
 ## Related Contracts
@@ -40,7 +121,7 @@ These smart contracts are part of GenesisMint.
 - [ERC721A.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/ERC721A.sol)
 
 
-## Documentation
+## 🧑‍⚖️ Authors
 
-[Documentation](https://linktodocumentation)
+- [@dadogg80](https://www.github.com/dadogg80)
 
