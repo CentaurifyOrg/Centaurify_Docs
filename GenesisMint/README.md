@@ -8,7 +8,7 @@
 
 # README - Genesis Mint Smart Contract
 
-This README is the documentation for the [GenesisMint](GenesisMint.sol) smart contract Developed by [Viken Blockchain Solutions](https://www.vikenblockchain.com) for [Centaurify](https://www.centaurify.com).
+This is the README for the [GenesisMint](GenesisMint.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.
 
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)

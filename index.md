@@ -8,15 +8,18 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ### 🎙 Description
 
-A Collection of Centaurify platform and product documentations. 
+A Collection of Centaurify platform and product documentations.
 
 
 ### 📖 Read The Docs
 
-- [GenesisMint documentation](/GenesisMint/README.md)
-- VikingVault documentation
-- Marketplace documentation
-- MintingTool documentation
+
+### 👨‍💻 Smart Contract Documentation
+
+- [GenesisMint - Read The Docs](/GenesisMint/README.md)
+- VikingVault - Read The Docs
+- Marketplace - Read The Docs
+- MintingTool - Read The Docs
 
 
 ### 🧑‍⚖️ Authors
