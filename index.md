@@ -14,7 +14,7 @@ A Collection of Centaurify platform and product documentations.
 ### 📖 Read The Docs
 
 
-### 👨‍💻 Smart Contract Documentation
+#### 👨‍💻 Smart Contract Documentation
 
 - [GenesisMint - Read The Docs](/GenesisMint/README.md)
 - VikingVault - Read The Docs
