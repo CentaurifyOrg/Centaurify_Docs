@@ -10,7 +10,7 @@
 
 ## Table of contents
 
-- [Genesis Mint ±≈] - Contract Methods](#genesis-mint----contract-methods)
+- [Genesis Mint - Contract Methods](#genesis-mint---contract-methods)
   - [Table of contents](#table-of-contents)
     - [Admin Methods](#admin-methods)
       - [Set URI Methods](#set-uri-methods)
