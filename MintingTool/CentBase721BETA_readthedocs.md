@@ -25,6 +25,7 @@ This base ERC721 smart contract is used by the CentArt NFT Marketplace `NFT Mint
 ## Table of contents
 
 - [Related Contracts](#related-contracts)
+- [Deployment Addresses](#deployment-addresses)
 - [Contract Methods](#contract-methods)
   - [`mint`](#mint-a-new-token)
   - [`batchMint`](#mint-a-batch-of-nft's)
@@ -40,12 +41,12 @@ These smart contracts are part of the Centaurify Marketplace platform.
 - [CentBaseMarketPlaceBETA.sol](https://github.dev/CentaurifyOrg/smart_contracts/blob/main/unit_tests/contracts/NFT/Marketplace/%20CentBaseMarketPlaceBETA.sol#L1)
 - [CentBaseWhitelistBETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Whitelist/CentBaseWhitelistBETA.sol)
 
-## CentBase721BETA.sol deployment addresses:
+## Deployment addresses:
 
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
-| Mumbai testsnet  | [0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3](https://mumbai.polygonscan.com/address/0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3#code) |
+| Mumbai testnet   | [0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3](https://mumbai.polygonscan.com/address/0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3#code)|
 
 ---
 
