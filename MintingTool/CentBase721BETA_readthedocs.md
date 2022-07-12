@@ -7,6 +7,7 @@
 ---
 
 ## CentBase721 Minting Contract - Read The Docs
+
 This is the official documentation for the [CentBase721BETA](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Minting/CentBase721BETA.sol) smart contract developed for [Centaurify](https://www.centaurify.com) by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.
 
 This base ERC721 smart contract is used by the CentArt NFT Marketplace `NFT Minting tool` developed by [Mlabs](https://mlabs.city/), for [Centaurify](https://www.centaurify.com).

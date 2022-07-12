@@ -14,10 +14,10 @@ A Collection of Centaurify platform and product documentations.
 
 ### 📖 Read The Docs
 
-- [GenesisMint documentation](/GenesisMint/README.md)
-- [VikingVault documentation](/VikingVault/README.md)
-- [Marketplace documentation](/MarketPlace/README.md)
-- [MintingTool documentation](/MintingTool/CentBase721BETA_readthedocs.md)
+- [GenesisMint - Read The Docs](/GenesisMint/README.md)
+- [VikingVault - Read The Docs](/VikingVault/README.md)
+- [Marketplace - Read The Docs](/MarketPlace/README.md)
+- [MintingTool - Read The Docs](MintingTool/CentBase721BETA_readthedocs.md)
 
 
 ### 🧑‍⚖️ Authors
