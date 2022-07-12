@@ -39,7 +39,7 @@ CentBase721BETA.sol deployment addresses:
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
-| Goerli           | []() |
+| Mumbai testsnet  | [0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3](https://mumbai.polygonscan.com/address/0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3#code) |
 
 CentBaseWhitelistBETA.sol deployment addresses:
 
