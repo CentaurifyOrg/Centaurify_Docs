@@ -10,7 +10,7 @@
 
 ## Table of contents
 
-- [Genesis Mint - Contract Methods](#genesis-mint---contract-methods)
+- [Contract Methods](#contract-methods)
   - [Table of contents](#table-of-contents)
     - [Admin Methods](#admin-methods)
       - [Set URI Methods](#set-uri-methods)
@@ -22,6 +22,7 @@
         - [`setPhaseTwoMintValues`](#setphasetwomintvalues)
         - [`setPhaseThreeMintValues`](#setphasethreemintvalues)
         - [`setPublicMintValues`](#setpublicmintvalues)
+        - [`setEarlyRevealedValues`](#setearlyrevealedvalues)
 
 <-- Back to [readthedocs](ReadTheDocs_Genesis_Mint.md#table-of-contents "Back to ReadTheDocs")
 
@@ -37,7 +38,7 @@
 
 - _Will set the `_baseTokenURI` for this contract._
 - _The `_baseTokenURI` is used as the base url for the unique PFPs used for this GenesisMint._  
-- _The `_baseTokenURI` has to be set before `setPhaseOneMintValues` or any mint phase starts, for any unique PFP image to be revealed._  
+- _The `_baseTokenURI` is a required parameter for the constructor._  
 
 
 ```javascript
@@ -57,7 +58,7 @@ function setBaseTokenURI(string memory __baseTokenURI) public onlyOwner {
 - _Will set the `_goldenTicketURI` for this contract._
 - _The `_goldenTicketURI` is used as the pre-reveal asset for the NFTs in this GenesisMint._  
 - _The `_goldenTicketURI` has to be set before `setPhaseOneMintValues`, and the pre-mint phase 1 starts._
-- _Example of `_goldenTicketURI`: ["https://xm9lk7erz9ku.usemoralis.com/goldenticket_teaser.mp4"](https://xm9lk7erz9ku.usemoralis.com/goldenticket_teaser.mp4)_
+- _Example of `_goldenTicketURI`: ["https://gateway.moralisipfs.com/ipfs/QmYVdmyWpFwfKfjXbYNheykFQPMY3roH2TWYLAnLaSCRnG"](QmYVdmyWpFwfKfjXbYNheykFQPMY3roH2TWYLAnLaSCRnG)_
 
 ```javascript
 function setGoldenTicketURI(string memory __goldenTicketURI) public onlyOwner {
@@ -74,10 +75,10 @@ function setGoldenTicketURI(string memory __goldenTicketURI) public onlyOwner {
 ##### `setContractURI`  
 
 - _Will set the `_contractURI` for this contract._
-- _The `_contractURI` is used by the function `contractURI()`, as required by OpenSeato honor royalty payout._  
+- _The `_contractURI` is used by the function `contractURI()`, as required by OpenSea to honor royalty payout._  
 - _Supports OpenSea's - Royalty Standard. { <https://docs.opensea.io/docs/contract-level-metadata> }_
-- _Example of `_contractURI`: ["https://xm9lk7erz9ku.usemoralis.com/contract.json"](https://xm9lk7erz9ku.usemoralis.com/contract.json)_
-
+- _Example of `_contractURI`: ["https://gateway.moralisipfs.com/ipfs/QmQk8b3mAEwEfeu6gyZ6CRcWcjkafnQt7x59U9KPP2ewwK"]("https://gateway.moralisipfs.com/ipfs/QmQk8b3mAEwEfeu6gyZ6CRcWcjkafnQt7x59U9KPP2ewwK")_
+- _The `_contractURI` is a required parameter for the constructor._  
 
 ```javascript
 function setContractURI(string memory __contractURI) public onlyOwner {
@@ -87,7 +88,7 @@ function setContractURI(string memory __contractURI) public onlyOwner {
 
 | Parameter        | Type      | Description                |
 | :--------        | :-------  | :------------------------- |
-| `__contractURI` | `string`  | _The url of the .JSON file used for this Genesis Mint._|
+| `__contractURI` | `string`  | _The url of the ContractURI used for this Genesis Mint._|
 
 ---
 
@@ -115,7 +116,7 @@ function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) 
 ##### `setPhaseTwoMintValues`  
 
 - _Will initiate the pre-mint phase 2._  
-- _Make sure the `_baseTokenURI` is set before `setPhaseTwoMintValues`, and the pre-mint phase 2 starts._
+- _Restricted by modifier `phaseOneIsOpen`._
 - _Make sure the `_goldenTicketURI` is set before `setPhaseTwoMintValues`, and the pre-mint phase 2 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
 
@@ -135,7 +136,7 @@ function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) 
 ##### `setPhaseThreeMintValues`  
 
 - _Will initiate the pre-mint phase 3._
-- _Make sure the `_baseTokenURI` is set before `setPhaseThreeMintValues`, and the pre-mint phase 3 starts._
+- _Restricted by modifier `phaseTwoIsOpen`._
 - _Make sure the `_goldenTicketURI` is set before `setPhaseThreeMintValues`, and the pre-mint phase 3 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
 
@@ -154,13 +155,31 @@ function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot
 
 ##### `setPublicMintValues`  
 
-- _Will initiate the public mint phase._
+- _Will initiate the public mint phase._  
+- _Restricted by modifier `phaseThreeIsOpen`._
 - _Make sure the `_baseTokenURI` is set before `setPublicMintValues`, and the public mint phase starts._
 - _Make sure the `_goldenTicketURI` is set before `setPublicMintValues`, and the public mint phase starts._
 
 
 ```javascript
 function setPublicMintValues(uint _publicStartTimestamp, uint _earlyRevealTimestamp) external onlyOwner phaseThreeIsOpen
+```
+
+| Parameter        | Type      | Description                |
+| :--------        | :-------  | :------------------------- |
+| `_publicStartTimestamp` | `uint`  | _The timestamp to start the public mint phase._|
+| `_earlyRevealTimestamp` | `uint`  | _The timestamp when earlyReveal is allowed._|
+
+---
+##### `setEarlyRevealedValues`  
+
+- _Will initiate the public mint phase._
+- _Make sure the `_baseTokenURI` is set before `setPublicMintValues`, and the public mint phase starts._
+- _Make sure the `_goldenTicketURI` is set before `setPublicMintValues`, and the public mint phase starts._
+
+
+```javascript
+function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner publicMintIsOpen
 ```
 
 | Parameter        | Type      | Description                |
