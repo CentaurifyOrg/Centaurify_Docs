@@ -56,7 +56,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 > _User methods available to users of the Genesis mint smart contract._
 
-- [Minting methods](Methods_user.md#minting-methods)
+- [Minting methods](Methods_user.md#mint-methods)
 - [Reveal methods](Methods_user.md#reveal-methods)
 
 ## [Workflows](WorkFlows.md#workflows)

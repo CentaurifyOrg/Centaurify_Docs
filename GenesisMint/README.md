@@ -99,20 +99,10 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 *Smart contracts are **auto** compiled and deployed to a local test enviroment.*   
 
-- To run unit-tests, you will need two terminal tabs/windows open.
-
-  **In terminal one:**
-  - Start a local node.
- 
-  ```bash
-    yarn ganache
-  ```
-  
-  **In terminal two:**
-  - Run **Genesis Mint** unit-tests.  
+- Run **Genesis Mint** unit-tests.  
   
   ```bash
-    yarn test_local_genesis
+    yarn test_local
   ```
 
 _______________________________________
