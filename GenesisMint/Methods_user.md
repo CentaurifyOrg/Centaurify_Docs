@@ -1,8 +1,8 @@
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)
 
-| Product       | Type | Description                |
-| :--------        | :-------       | :------------------------- |
-| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP |
+| Product      | Type               | Description                |
+| :--------    | :-------           | :------------------------- |
+| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP        |
 
 ---
 
@@ -12,47 +12,61 @@
 
 - [Contract Methods](#contract-methods)
   - [Table of contents](#table-of-contents)
-    - [Admin Methods](#admin-methods)
-      - [Set URI Methods](#set-uri-methods)
-        - [`setBaseTokenURI`](#setbasetokenuri)
-        - [`setGoldenTicketURI`](#setgoldenticketuri)
-        - [`setContractURI`](#setcontracturi)
-      - [Set Phase Methods](#set-phase-methods)
-        - [`setPhaseOneMintValues`](#setphaseonemintvalues)
-        - [`setPhaseTwoMintValues`](#setphasetwomintvalues)
-        - [`setPhaseThreeMintValues`](#setphasethreemintvalues)
-        - [`setPublicMintValues`](#setpublicmintvalues)
-        - [`setEarlyRevealedValues`](#setearlyrevealedvalues)
+    - [User Methods](#user-methods)
+      - [Mint Methods](#mint-methods)
+        - [`whitelistPhase1Mint`](#whitelistphase1mint)
+        - [`whitelistPhase2Mint`](#whitelistphase2mint)
 
 <-- Back to [readthedocs](ReadTheDocs_Genesis_Mint.md#table-of-contents "Back to ReadTheDocs")
 
-### Admin Methods
+### User Methods
 
-> _The methods below can only be called by the **OWNER** account._
+> _The methods below can are not restricted to Owner and can be called by **ANY** account._
 
 ---
 
-#### Set URI Methods
+#### Mint Methods
 
-##### `setBaseTokenURI`  
+##### `whitelistPhase1Mint`  
 
-- _Will set the `_baseTokenURI` for this contract._
-- _The `_baseTokenURI` is used as the base url for the unique PFPs used for this GenesisMint._  
-- _The `_baseTokenURI` is a required parameter for the constructor._  
-
+- _If user account is whitelisted, it will allow to mint the accounts total allocation._
 
 ```javascript
-function setBaseTokenURI(string memory __baseTokenURI) public onlyOwner {
-  _baseTokenURI = __baseTokenURI;
-}  
+function whitelistPhase1Mint(
+    uint amount,
+    bytes32 leaf,
+    bytes32[] memory proof
+) external payable phaseOneIsOpen costs(amount) {}
 ```  
 
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `__baseTokenURI` | `string`  | _The base Url for the NFTs of this Genesis Mint contract._ |  
+| Parameter  | Type        | Description                      |
+| :--------  | :-------    | :-------------------------       |
+| `amount`   | `uint`      | _The amount of nft's to mint._   |  
+| `leaf`     | `bytes32`   | _The leaf node of the three._    |  
+| `proof`    | `bytes32[]` | _The proof from the merkletree._ |  
 
 ---
 
+##### `whitelistPhase2Mint`  
+
+- _If user account is whitelisted, it will allow to mint the accounts total allocation._
+
+```javascript
+function whitelistPhase2Mint(
+    uint amount,
+    bytes32 leaf,
+    bytes32[] memory proof
+) external payable phaseTwoIsOpen costs(amount) {}
+```  
+
+| Parameter  | Type        | Description                      |
+| :--------  | :-------    | :-------------------------       |
+| `amount`   | `uint`      | _The amount of nft's to mint._   |  
+| `leaf`     | `bytes32`   | _The leaf node of the three._    |  
+| `proof`    | `bytes32[]` | _The proof from the merkletree._ |  
+
+---
+<!-- 
 ##### `setGoldenTicketURI`
 
 - _Will set the `_goldenTicketURI` for this contract._
@@ -103,7 +117,7 @@ function setContractURI(string memory __contractURI) public onlyOwner {
 
 
 ```javascript
-function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) external onlyOwner
+function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) external onlyOwner {}
 ```
 
 | Parameter        | Type      | Description                |
@@ -123,13 +137,13 @@ function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) 
 
 
 ```javascript
-function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) external onlyOwner phaseOneIsOpen
+function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) external onlyOwner phaseOneIsOpen {}
 ```
 
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `_phase2StartTimestamp` | `uint`  | _The timestamp to start the premint Phase 2._|
-| `_merkleRoot` | `bytes32`  | _The merkleroot of the Phase2 whitelist to mint from._|
+| Parameter               | Type      | Description                |
+| :--------               | :-------  | :------------------------- |
+| `_phase2StartTimestamp` | `uint`    | _The timestamp to start the premint Phase 2._|
+| `_merkleRoot`           | `bytes32` | _The merkleroot of the Phase2 whitelist to mint from._|
 
 ---
 
@@ -143,17 +157,17 @@ function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) 
 
 
 ```javascript
-function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot) external onlyOwner phaseTwoIsOpen
+function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot) external onlyOwner phaseTwoIsOpen {}
 ```
 
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `_phase3StartTimestamp` | `uint`  | _The timestamp to start the premint Phase 3._|
-| `_merkleRoot` | `bytes32`  | _The merkleroot of the Phase3 whitelist to mint from._|
+| Parameter               | Type      | Description                |
+| :--------               | :-------  | :------------------------- |
+| `_phase3StartTimestamp` | `uint`    | _The timestamp to start the premint Phase 3._|
+| `_merkleRoot`           | `bytes32` | _The merkleroot of the Phase3 whitelist to mint from._|
 
 ---
 
-##### `setPublicMintValues`  
+##### `setPublicMintValues`
 
 - _Will initiate the public mint phase._  
 - _Restricted by modifier `phaseThreeIsOpen`._
@@ -162,29 +176,43 @@ function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot
 
 
 ```javascript
-function setPublicMintValues(uint _publicStartTimestamp, uint _earlyRevealTimestamp) external onlyOwner phaseThreeIsOpen
+function setPublicMintValues(uint _publicStartTimestamp) external onlyOwner phaseThreeIsOpen {}
 ```
 
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `_publicStartTimestamp` | `uint`  | _The timestamp to start the public mint phase._|
-| `_earlyRevealTimestamp` | `uint`  | _The timestamp when earlyReveal is allowed._|
+| Parameter               | Type      | Description                                    |
+| :--------               | :-------  | :-------------------------                     |
+| `_publicStartTimestamp` | `uint`    | _The timestamp to start the public mint phase._|
 
 ---
-##### `setEarlyRevealedValues`  
 
-- _Will initiate the public mint phase._
-- _Make sure the `_baseTokenURI` is set before `setPublicMintValues`, and the public mint phase starts._
-- _Make sure the `_goldenTicketURI` is set before `setPublicMintValues`, and the public mint phase starts._
+##### `setEarlyRevealValues`  
 
+- _Will initiate the EarlyReveal phase._ 
+- _Restricted by modifier `publicMintIsOpen`._
+- _Will allow GoldenTicket holders to initiate early reveal of their PFP._
 
 ```javascript
-function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner publicMintIsOpen
+function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner publicMintIsOpen {}
 ```
 
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `_publicStartTimestamp` | `uint`  | _The timestamp to start the public mint phase._|
-| `_earlyRevealTimestamp` | `uint`  | _The timestamp when earlyReveal is allowed._|
+| Parameter               | Type      | Description                                     |
+| :--------               | :-------  | :-------------------------                      |
+| `_earlyRevealTimestamp` | `uint`    | _The timestamp to start the early reveal phase._|
 
 ---
+
+##### `setRevealValues`  
+
+- _Will initiate the Revealed phase._ 
+- _Restricted by modifier `earlyRevealIsOpen`._
+- _Will allow GoldenTicket holders to initiate early reveal of their PFP._
+
+```javascript
+ function setRevealValues() public onlyOwner earlyRevealIsOpen {
+      status = Status.Revealed;
+ }
+ ```
+
+
+---
+ -->

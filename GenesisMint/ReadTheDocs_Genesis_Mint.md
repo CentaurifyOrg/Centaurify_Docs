@@ -22,6 +22,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
   - [Introduction](#introduction)
   - [Table Of Contents](#table-of-contents)
   - [Supported Features](#supported-features)
+  - [Contract Modifiers](#contract-modifiers)
   - [Contract Methods](#contract-methods)
     - [Admin Methods](#admin-methods)
     - [User Methods](#user-methods)
@@ -33,23 +34,30 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 > _Features supported by this smart contract._
 
-## [Contract Methods](Methods.md#contract-methods)
+## [Contract Modifiers](Modifiers.md#contract-modifiers)
+
+> _Modifiers used to validate method parameters in the Genesis Mint smart contract._
+
+- [Phase modifiers](Modifiers.md#phase-modifiers)
+- [Other modifiers](Modifiers.md#other-modifiers)
+
+## [Contract Methods](#contract-methods)
 
 > _Restricted admin methods and normal user methods in the Genesis Mint smart contract._
 
-### [Admin Methods](Methods.md#admin-methods)
+### [Admin Methods](Methods_admin.md#admin-methods)
 
 > _Admin methods available to the contract OWNER account._
 
-- [Set URI Methods](Methods.md#set-uri-methods)
-- [Set Phase Methods](Methods.md#set-phase-methods)
+- [Set URI methods](Methods_admin.md#set-uri-methods)
+- [Set Phase methods](Methods_admin.md#set-phase-methods)
 
-### [User Methods](Methods.md#user-methods)
+### [User Methods](Methods_user.md#user-methods)
 
 > _User methods available to users of the Genesis mint smart contract._
 
-- [Minting Methods](Methods.md#minting-methods)
-- [Reveal Methods](Methods.md#reveal-methods)
+- [Minting methods](Methods_user.md#minting-methods)
+- [Reveal methods](Methods_user.md#reveal-methods)
 
 ## [Workflows](WorkFlows.md#workflows)
 
