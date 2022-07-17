@@ -34,7 +34,7 @@
 - _Only whitelisted accounts of pre-mint phase1 is allowed to mint their allocated amount._
 - _Max 5 NFT's per account._
 - _Restricted by modifiers `phaseOneIsOpen`, `costs(amount)`._
-- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf`and `bytes32[] proof` for the user account._
+- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf` and `bytes32[] proof` for the user account._
 
 ```javascript
 function whitelistPhase1Mint(
@@ -57,7 +57,7 @@ function whitelistPhase1Mint(
 - _Only whitelisted accounts of pre-mint phase2 accounts is allowed to mint their allocated amount._
 - _Max 4 NFT's per account._
 - _Restricted by modifiers `phaseTwoIsOpen`, `costs(amount)`._
-- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf`and `bytes32[] proof` for the user account._
+- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf` and `bytes32[] proof` for the user account._
 
 ```javascript
 function whitelistPhase2Mint(
@@ -80,7 +80,7 @@ function whitelistPhase2Mint(
 - _Only whitelisted accounts of pre-mint phase3 is allowed to mint their allocated amount._
 - _Max 3 NFT's allocated per account._
 - _Restricted by modifiers `phaseThreeIsOpen`, `costs(amount)`._
-- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf`and `bytes32[] proof` for the user account._
+- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf` and `bytes32[] proof` for the user account._
 
 ```javascript
 function whitelistPhase3Mint(
@@ -103,7 +103,7 @@ function whitelistPhase3Mint(
 - _PublicMint has no restrictions on who can mint._
 - _Max 3 NFT's allocated per account._
 - _Restricted by modifiers `publicMintIsOpen`, `costs(amount)`._
-- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf`and `bytes32[] proof` for the user account._
+- _Use [frontend.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/frontend.js "Script to generate the leaf and proof") to generate and validate the `bytes32 leaf` and `bytes32[] proof` for the user account._
 
 ```javascript
 function PublicMint(uint amount) external payable publicMintIsOpen costs(amount) {}

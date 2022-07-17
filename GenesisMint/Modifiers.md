@@ -64,7 +64,7 @@ modifier phaseOneIsOpen() {
 ##### `phaseTwoIsOpen`  
 
 - _Modifier `phaseTwoIsOpen` validates if the pre-mint phase2 has started._
-- _Used by the method [`whitelistPhase2Mint`]()._
+- _Used by the method [`whitelistPhase2Mint`](Methods_user.md#whitelistphase2mint "Link to whitelistPhase2Mint")._
 - _Used by the admin method [`setPhaseThreeMintValues`](./Methods.md#setphasethreemintvalues "Link to setPhaseThreeMintValues")._
 
 
@@ -85,7 +85,7 @@ modifier phaseTwoIsOpen() {
 ##### `phaseThreeIsOpen`  
 
 - _Modifier `phaseThreeIsOpen` validates if the pre-mint phase3 has started._
-- _Used by the method [`whitelistPhase3Mint`]()._
+- _Used by the method [`whitelistPhase3Mint`](Methods_user.md#whitelistphase3mint "Link to whitelistPhase3Mint")._
 - _Used by the admin method [`setPublicMintValues`](./Methods.md#setpublicmintvalues "Link to setPublicMintValues")._
 
 
@@ -108,7 +108,7 @@ modifier phaseThreeIsOpen() {
 ##### `publicMintIsOpen`  
 
 - _Modifier `publicMintIsOpen` validates if the public mint phase has started._
-- _Used by the method [`publicMint`]()._
+- _Used by the method [`publicMint`](Methods_user.md#publicmint "Link to publicMint")._
 - _Used by the admin method [`setEarlyRevealValues`](./Methods.md#setearlyrevealvalues "Link to setEarlyRevealValues")._
 
 
