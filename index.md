@@ -21,6 +21,10 @@ A Collection of Centaurify platform and product documentations.
 - [MintingTool - Read The Docs](MintingTool/CentBase721BETA_readthedocs.md)
 - [Marketplace - Read The Docs](MarketPlace/README.md)
 
+#### Frontend Application
+
+- [Centaurify App](/)
+
 
 ### 🧑‍⚖️ Authors
 
