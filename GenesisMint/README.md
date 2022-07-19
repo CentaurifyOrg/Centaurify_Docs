@@ -113,7 +113,6 @@ _______________________________________
 These smart contracts are part of GenesisMint.
 
 - [GenesisMint.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/GenesisMint.sol "Main NFT Smart-contract")
-- [ERC721A.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/ERC721A.sol)
 
 
 ## 🧑‍⚖️ Authors
