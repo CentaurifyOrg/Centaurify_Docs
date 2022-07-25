@@ -34,8 +34,8 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
     Add link to docs file.
 
-- [Marketplace](Marketplace.md)
-- [Marketplace Storage](MarketplaceStorage.md)
+- [Marketplace](MarketPlace.md)
+- [Marketplace Storage](MarketPlace_Storage.md)
 - [ERC721Verifiable](ERC721Verifiable.md)
 - [ERC721Interface](ERC721Interface.md)
 - [ERC20Interface](ERC20Interface.md)
