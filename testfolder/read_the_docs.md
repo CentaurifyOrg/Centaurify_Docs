@@ -34,12 +34,12 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
     Add link to docs file.
 
-- [Marketplace](MarketPlace.md)
-- [Marketplace Storage](MarketPlace_Storage.md)
+- [Marketplace](Marketplace.md)
+- [Marketplace Storage](MarketplaceStorage.md)
 - [ERC721Verifiable](ERC721Verifiable.md)
 - [ERC721Interface](ERC721Interface.md)
 - [ERC20Interface](ERC20Interface.md)
-   - [IMarketplace](interfaces/IMarketPlace_Storage.md)
+   - [IMarketplace](interfaces/IMarketplace.md)
    - [IRoyaltyEngineV1](interfaces/IRoyaltyEngineV1.md)
    - [IRoyaltyRegistry](interfaces/IRoyaltyRegistry.md)
    - [IWeth](interfaces/IWeth.md)
