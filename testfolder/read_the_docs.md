@@ -34,15 +34,15 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
     Add link to docs file.
 
-- [Marketplace](/testfolder/MarketPlace.md)
-- [Marketplace Storage](/testfolder/MarketPlace_Storage.md)
-- [ERC721Verifiable](/testfolder/ERC721Verifiable.md)
-- [ERC721Interface](/testfolder/ERC721Interface.md)
-- [ERC20Interface](/testfolder/ERC20Interface.md)
-   - [IMarketplace](/testfolder/interfaces/IMarketPlace_Storage.md)
-   - [IRoyaltyEngineV1](/testfolder/interfaces/IRoyaltyEngineV1.md)
-   - [IRoyaltyRegistry](/testfolder/interfaces/IRoyaltyRegistry.md)
-   - [IWeth](/testfolder/interfaces/IWeth.md)
+- [Marketplace](MarketPlace.md)
+- [Marketplace Storage](MarketPlace_Storage.md)
+- [ERC721Verifiable](ERC721Verifiable.md)
+- [ERC721Interface](ERC721Interface.md)
+- [ERC20Interface](ERC20Interface.md)
+   - [IMarketplace](/interfaces/IMarketPlace_Storage.md)
+   - [IRoyaltyEngineV1](/interfaces/IRoyaltyEngineV1.md)
+   - [IRoyaltyRegistry](/interfaces/IRoyaltyRegistry.md)
+   - [IWeth](/interfaces/IWeth.md)
 
 _______________________________________
 
