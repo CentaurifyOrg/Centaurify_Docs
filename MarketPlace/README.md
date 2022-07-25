@@ -6,7 +6,7 @@ Centaurify is a live event and Music NFT universe.
 
 - [CentArt NFT Marketplace](#centart-nft-marketplace)
   - [Table of Contents](#table-of-contents)
-  - [Background](#background)
+  - [Description](#description)
   - [Deployments](#deployments)
   - [Install](#install)
   - [Usage](#usage)
@@ -14,7 +14,7 @@ Centaurify is a live event and Music NFT universe.
   - [Contributing](#contributing)
   - [License](#license)
 
-## Background
+## Description
 
 Centaurify offers a music niched NFT marketplace and a full scale ticketing solution for live events.  
 
@@ -23,7 +23,7 @@ By tokenizing tickets with NFT and Smart contract technology using a multi chain
 Built by artists for artists.  
 Empowering Music!
 
-See the [documentation](docs/), the [contracts](contracts/NFT/), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
+See the [documentation](docs/), the [contracts](./contracts/NFT/), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
 
 ## Deployments
 
@@ -39,7 +39,7 @@ CentBase721BETA.sol deployment addresses:
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
-| Mumbai testsnet  | []() |
+| Mumbai testnet   | [0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3](https://mumbai.polygonscan.com/address/0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3#code) |
 
 CentBaseWhitelistBETA.sol deployment addresses:
 
@@ -61,11 +61,21 @@ To install dependencies and compile contracts:
 
 ```bash
 git clone https://github.com/CentaurifyOrg/smart_contracts.git && cd CentArt
-yarn install
+yarn
 yarn compile
 ```
 
-## Usage
+### Usage
+
+**To run hardhat tests written in javascript:**
+
+```bash
+yarn test_local
+yarn coverage
+```
+
+> Note: artifacts and cache folders may occasionally need to be removed between standard and coverage test runs.
+
 
 **To deploy CentArt contracts to localhost you need two terminals open:**
 
@@ -80,23 +90,6 @@ Terminal two:
 ```bash
 yarn deploy_local_nft
 ```
-
-**To run hardhat tests written in javascript you need two terminals open:**
-
-Terminal one:
-
-```bash
-yarn ganache
-```
-
-Terminal two:
-
-```bash
-yarn test_local
-yarn coverage
-```
-
-> Note: artifacts and cache folders may occasionally need to be removed between standard and coverage test runs.
 
 ## Audits
 
