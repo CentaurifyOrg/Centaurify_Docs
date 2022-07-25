@@ -34,7 +34,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
     Add link to docs file.
 
-- [Read The Docs](/read_the_docs.md)
+- [Read The Docs](read_the_docs.md)
 
 ## Instructions
 
