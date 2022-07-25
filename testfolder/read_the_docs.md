@@ -39,10 +39,10 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 - [ERC721Verifiable](ERC721Verifiable.md)
 - [ERC721Interface](ERC721Interface.md)
 - [ERC20Interface](ERC20Interface.md)
-   - [IMarketplace](/interfaces/IMarketPlace_Storage.md)
-   - [IRoyaltyEngineV1](/interfaces/IRoyaltyEngineV1.md)
-   - [IRoyaltyRegistry](/interfaces/IRoyaltyRegistry.md)
-   - [IWeth](/interfaces/IWeth.md)
+   - [IMarketplace](interfaces/IMarketPlace_Storage.md)
+   - [IRoyaltyEngineV1](interfaces/IRoyaltyEngineV1.md)
+   - [IRoyaltyRegistry](interfaces/IRoyaltyRegistry.md)
+   - [IWeth](interfaces/IWeth.md)
 
 _______________________________________
 
