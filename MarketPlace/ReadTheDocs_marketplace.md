@@ -22,7 +22,10 @@ Be part of the next generation music scene, with the most exclusive web3 music c
   - [Introduction](#introduction)
   - [Table Of Contents](#table-of-contents)
     - [Supported Features](#supported-features)
-    - [How To Use](#how-to-use)
+    - [How To Use The Marketplace](#how-to-use-the-marketplace)
+      - [Market Item](#market-item)
+      - [Market Order](#market-order)
+      - [Market Auction](#market-auction)
     - [Smart Contract](#smart-contract)
       - [Contract Modifiers](#contract-modifiers)
       - [Contract Methods](#contract-methods)
@@ -33,18 +36,33 @@ _Features supported by this smart contract._
 
 - [Supported features](Supported_features.md#supported-features) 
 
-### How To Use  
+---  
 
-> _This marketplace smart contract will allow pre-approved artists to list, and sell the listed NFT for a **fixed price** or for the highest price in an **timed auction.**_
+### How To Use The Marketplace
 
-**This documentation will go through the different steps addressed below.**
+_This marketplace smart contract will allow pre-approved artists to create a market item to list at our marketplace, the artist can then sell the listed item for a **fixed price** or for the highest price in a **timed auction**._
 
-- Creating a market item.
+This documentation will go through the different steps listed below.  
 
-- Creating a market order.
+#### Market Item
 
-- Creating a market auction.
+> Creating a market item is the process of preparing an NFT to be sold for a fixed price or as a timed auction.
 
+- [Create an market item.](CreateItem.md#create-an-market-item "Link to description of how to create an market item.")
+
+#### Market Order
+
+> Creating a market order is to sell a market item for a pre-set fixed price.
+
+- [Create an market order.](Createorder.md#create-an-market-order "Link to description of how to create an market order.")
+
+#### Market Auction
+
+> Creating a market auction is to sell a market item at a timed auction.
+
+- [Create an market auction.](Createauction.md#create-an-market-auction "Link to description of how to create an market auction.")
+
+---  
 
 ### Smart Contract  
 

@@ -13,8 +13,8 @@
 - [Contract Modifiers](#contract-modifiers)
   - [Table of contents](#table-of-contents)
     - [Modifiers](#modifiers)
-      - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
       - [`isAuthorized(itemId)`](#isauthorizeditemid)
+      - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
       - [`costs`](#costs)
 
 <-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#table-of-contents "Back to Read-The-Docs")
@@ -24,6 +24,28 @@
 > _The different modifiers is set to validate specific contract parameters to pass._  
 > _The modifiers validating the function calls in this smart contract._  
 > _Validates the correct status of the market item_.
+
+#### `isAuthorized(itemId)`  
+
+- _Modifier `isAuthorized` will validate if the caller is authorized._
+- _Used by the method [`createMarketOrder`]( "Link to createMarketOrder()")._
+- _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
+
+```javascript
+    /// @notice Modifier will validate if the caller is authorized.
+    /// @param itemId The tokenId of the nft to validate.
+    modifier isAuthorized(bytes32 itemId) {
+        MarketItem memory _item = itemsMapping[itemId];
+        if (_item.tokenOwner != _msgSender()) revert NotAuth();
+        _;
+    }
+```  
+
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :-------------------------     |
+| `itemId`      | `bytes32`| _The itemId._|  
+
+---
 
 #### `isNotActive(bytes32 itemId)`
 
@@ -38,28 +60,6 @@
     modifier isNotActive(bytes32 itemId) {
         MarketItem memory _item = itemsMapping[itemId];
         if (_item.active) revert IsActive(_item.itemId, _item.status);
-        _;
-    }
-```  
-
-| Parameter | Type     | Description                    |
-| :-------- | :------- | :-------------------------     |
-| `itemId`      | `bytes32`| _The itemId._|  
-
----
-
-#### `isAuthorized(itemId)`  
-
-- _Modifier `isAuthorized` will validate if the caller is authorized._
-- _Used by the method [`createMarketOrder`]( "Link to createMarketOrder()")._
-- _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
-
-```javascript
-    /// @notice Modifier will validate if the caller is authorized.
-    /// @param itemId The tokenId of the nft to validate.
-    modifier isAuthorized(bytes32 itemId) {
-        MarketItem memory _item = itemsMapping[itemId];
-        if (_item.tokenOwner != _msgSender()) revert NotAuth();
         _;
     }
 ```  
