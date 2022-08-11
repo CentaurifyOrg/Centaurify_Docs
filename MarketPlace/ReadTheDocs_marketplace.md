@@ -41,19 +41,19 @@ This documentation will go through the different steps listed below.
 
 > Creating a market item is the process of preparing an NFT to be sold for a fixed price or as a timed auction.
 
-- [Create an market item.](CreateItem.md#create-an-market-item "Link to description of how to create an market item.")
+- [Read about market item.](MarketItem.md#create-an-market-item "Link to description of market items.")
 
 #### Market Order
 
 > Creating a market order is to sell a market item for a pre-set fixed price.
 
-- [Create an market order.](Createorder.md#create-an-market-order "Link to description of how to create an market order.")
+- [Read about market orderr.](MarketOrder.md#create-an-market-order "Link to description of market orders.")
 
 #### Market Auction
 
 > Creating a market auction is to sell a market item at a timed auction.
 
-- [Create an market auction.](Createauction.md#create-an-market-auction "Link to description of how to create an market auction.")
+- [Read about market auctions.](MarketAuction.md#create-an-market-auction "Link to description of market auctions.")
 
 ---  
 
@@ -61,7 +61,7 @@ This documentation will go through the different steps listed below.
 
 #### Contract Modifiers
 
-_Modifiers used to validate method parameters in the Marketplace smart contract._
+_Modifiers used to validate method parameters in the marketplace smart contract._
 
 - [Modifiers](Modifiers.md#contract-modifiers)
 
