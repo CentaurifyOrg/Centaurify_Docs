@@ -1,4 +1,4 @@
-![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)
+![Centaurify](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)
 
 | Product                     | Type                       | Description                                               |
 | :--------                   | :-------                   | :-------------------------                                |
@@ -16,13 +16,12 @@ This is the official documentation for the [Marketplace](https://github.com/Cent
 
 Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.
 
-## Table Of Contents
+### Table Of Contents
 
 - [CentArt Marketplace - Read The Docs](#centart-marketplace---read-the-docs)
   - [Introduction](#introduction)
-  - [Table Of Contents](#table-of-contents)
-    - [Supported Features](#supported-features)
-    - [How To Use The Marketplace](#how-to-use-the-marketplace)
+    - [Table Of Contents](#table-of-contents)
+      - [How To Use The Marketplace](#how-to-use-the-marketplace)
       - [Market Item](#market-item)
       - [Market Order](#market-order)
       - [Market Auction](#market-auction)
@@ -30,15 +29,9 @@ Be part of the next generation music scene, with the most exclusive web3 music c
       - [Contract Modifiers](#contract-modifiers)
       - [Contract Methods](#contract-methods)
 
-### Supported Features
-
-_Features supported by this smart contract._
-
-- [Supported features](Supported_features.md#supported-features) 
-
 ---  
 
-### How To Use The Marketplace
+#### How To Use The Marketplace
 
 _This marketplace smart contract will allow pre-approved artists to create a market item to list at our marketplace, the artist can then sell the listed item for a **fixed price** or for the highest price in a **timed auction**._
 
