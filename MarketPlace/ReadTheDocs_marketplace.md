@@ -41,13 +41,13 @@ This documentation will go through the different steps listed below.
 
 > Creating a market item is the process of preparing an NFT to be sold for a fixed price or as a timed auction.
 
-- [Read about market item.](MarketItems.md#create-an-market-item "Link to description of market items.")
+- [Read about market items.](MarketItems.md#market-items "Link to description of market items.")
 
 #### Market Order
 
 > Creating a market order is to sell a market item for a pre-set fixed price.
 
-- [Read about market orderr.](MarketOrder.md#create-an-market-order "Link to description of market orders.")
+- [Read about market orders.](MarketOrder.md#create-an-market-order "Link to description of market orders.")
 
 #### Market Auction
 
