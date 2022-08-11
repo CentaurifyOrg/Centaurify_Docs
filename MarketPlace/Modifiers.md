@@ -13,161 +13,99 @@
 - [Contract Modifiers](#contract-modifiers)
   - [Table of contents](#table-of-contents)
     - [Modifiers](#modifiers)
-      - [Phase modifiers](#phase-modifiers)
-        - [`phaseOneIsOpen`](#phaseoneisopen)
-        - [`phaseTwoIsOpen`](#phasetwoisopen)
-        - [`phaseThreeIsOpen`](#phasethreeisopen)
-        - [`publicMintIsOpen`](#publicmintisopen)
-        - [`earlyRevealIsOpen`](#earlyrevealisopen)
-      - [Other modifiers](#other-modifiers)
+        - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
+        - [`isAuthorized(itemId)`](#isauthorizeditemid)
         - [`costs`](#costs)
 
-<-- Back to [Read-The-Docs](ReadTheDocs_Genesis_Mint.md#table-of-contents "Back to Read-The-Docs")
+<-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#table-of-contents "Back to Read-The-Docs")
 
 ### Modifiers
 
-_The modifiers validating the function calls in this smart contract._
 
----
+> _The different modifiers is set to validate specific contract parameters to pass._  
+> _The modifiers validating the function calls in this smart contract._  
+> _Validates the correct status of the market item_.
 
-#### Phase modifiers
 
-> _The different modifiers is set to validate specific phase variables to pass._
->
-> - Validates the correct status of the contract.
-> - Validates that the phase specific `startTimestamp` is set.
-> - Validates if the current `block.timestamp` is within the phase specific `startTimestamp` and `endTimestamp`.  
 
-##### `phaseOneIsOpen`  
+##### `isNotActive(bytes32 itemId)`  
 
-- _Modifier `phaseOneIsOpen` validates if the pre-mint phase1 has started._
-- _Used by the method [`whitelistPhase1Mint`](Methods_user.md#whitelistphase1mint "Link to whitelistPhase1Mint")._
-- _Used by the admin method [`setPhaseTwoMintValues`](Methods.md#setphasetwomintvalues "Link to setPhaseTwoMintValues")._
-
+- _Modifier `isNotActive` will validate that the marketItem is not already a live item._
+- _Parameter `itemId` The tokenId of the nft to validate._
+- _Used by the method [`createMarketOrder`]( "Link to createMarketOrder()")._
+- _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
 
 ```javascript
-modifier phaseOneIsOpen() {
-  uint currentTime = block.timestamp;
-  if (status != Status.Phase1) revert Code_1(status, Status.Phase1);
-  if (
-      currentTime <= phase1StartTimestamp ||
-      currentTime >= phase1EndTimestamp
-  ) revert Code_2(phase1StartTimestamp);
-
-  if (phase1StartTimestamp == 0) revert Code_2(phase1StartTimestamp);
-  _;
-}
-```  
-
----
-
-##### `phaseTwoIsOpen`  
-
-- _Modifier `phaseTwoIsOpen` validates if the pre-mint phase2 has started._
-- _Used by the method [`whitelistPhase2Mint`](Methods_user.md#whitelistphase2mint "Link to whitelistPhase2Mint")._
-- _Used by the admin method [`setPhaseThreeMintValues`](./Methods.md#setphasethreemintvalues "Link to setPhaseThreeMintValues")._
-
-
-```javascript
-modifier phaseTwoIsOpen() {
-  uint currentTime = block.timestamp;
-  if (status != Status.Phase2) revert Code_1(status, Status.Phase2);
-  if (
-      currentTime <= phase2StartTimestamp ||
-      currentTime >= phase2EndTimestamp
-  ) revert Code_2(phase2StartTimestamp);
-
-  if (phase2StartTimestamp == 0) revert Code_2(phase2StartTimestamp);
-  _;
-}
-```  
-
-##### `phaseThreeIsOpen`  
-
-- _Modifier `phaseThreeIsOpen` validates if the pre-mint phase3 has started._
-- _Used by the method [`whitelistPhase3Mint`](Methods_user.md#whitelistphase3mint "Link to whitelistPhase3Mint")._
-- _Used by the admin method [`setPublicMintValues`](./Methods.md#setpublicmintvalues "Link to setPublicMintValues")._
-
-
-```javascript
-modifier phaseThreeIsOpen() {
-  uint currentTime = block.timestamp;
-  if (status != Status.Phase3) revert Code_1(status, Status.Phase3);
-  if (
-      currentTime <= phase3StartTimestamp ||
-      currentTime >= phase3EndTimestamp
-  ) revert Code_2(phase3StartTimestamp);
-
-  if (phase3StartTimestamp == 0) revert Code_2(phase3StartTimestamp);
-  _;
-}
-```  
-
----
-
-##### `publicMintIsOpen`  
-
-- _Modifier `publicMintIsOpen` validates if the public mint phase has started._
-- _Used by the method [`publicMint`](Methods_user.md#publicmint "Link to publicMint")._
-- _Used by the admin method [`setEarlyRevealValues`](./Methods.md#setearlyrevealvalues "Link to setEarlyRevealValues")._
-
-
-```javascript
-modifier publicMintIsOpen() {
-  uint currentTime = block.timestamp;
-  if (status != Status.Public) revert Code_1(status, Status.Public);
-  if (
-      currentTime <= publicStartTimestamp ||
-      currentTime >= publicEndTimestamp
-  ) revert Code_2(publicStartTimestamp);
-
-  if (publicStartTimestamp == 0) revert Code_2(publicStartTimestamp);
-  _;
-}
-```  
-
----
-
-##### `earlyRevealIsOpen`  
-
-- _Modifier `earlyRevealIsOpen` validates if the early reveal phase has started._
-- _Used by the method [`earlyReveal`]()._
-- _Used by the admin method [`setRevealValues`](./Methods.md#setrevealvalues "Link to setRevealValues")._
-
-
-```javascript
-modifier earlyRevealIsOpen() {
-  uint currentTime = block.timestamp;
-  if (status != Status.EarlyReveal) 
-    revert Code_1(status, Status.EarlyReveal);
-  
-  if (currentTime <= earlyRevealTimestamp) 
-    revert Code_2(earlyRevealTimestamp);
- 
- if (earlyRevealTimestamp == 0) revert Code_2(earlyRevealTimestamp);
-  _;
-}
-```  
-
----
-
-#### Other modifiers
-
-##### `costs`
-
-- _Modifier `costs` validates if `msg.value` is enough to pay for the minting._
-- _Used by the methods [`whitelistPhase1Mint`]( "Link to whitelistPhase1Mint"), [`whitelistPhase2Mint`]( "Link to whitelistPhase2Mint"), [`whitelistPhase3Mint`]( "Link to whitelistPhase3Mint")._
-
-```javascript
-    modifier costs(uint amount) {
-        uint value = (mintPrice * amount);
-        if (msg.value < value) revert LowAmount(msg.value);
+    /// @dev Modifier will validate that the marketItem is not already a live item.
+    /// @param itemId The id of the marketItem.
+    modifier isNotActive(bytes32 itemId) {
+        MarketItem memory _item = itemsMapping[itemId];
+        if (_item.active) revert IsActive(_item.itemId, _item.status);
         _;
     }
 ```  
 
 | Parameter | Type     | Description                    |
 | :-------- | :------- | :-------------------------     |
-| `amount`  | `uint`   | _The amount of tokens to mint, is passed by the base metod._|
+| `itemId`      | `bytes32`| _The itemId._|  
+
+---
+
+##### `isAuthorized(itemId)`  
+
+- _Modifier `isAuthorized` validates if the pre-mint phase3 has started._
+- _Used by the method [`createMarketOrder`]( "Link to createMarketOrder()")._
+- _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
+
+```javascript
+    /// @dev Modifier will validate if the caller is authorized.
+    /// @param itemId The tokenId of the nft to validate.
+    modifier isAuthorized(bytes32 itemId) {
+        MarketItem memory _item = itemsMapping[itemId];
+        if (_item.tokenOwner != _msgSender()) revert NotAuth();
+        _;
+    }
+```  
+
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :-------------------------     |
+| `itemId`      | `bytes32`| _The itemId._|  
+
+---
+
+##### `costs`
+
+- _Modifier `costs` validates if `msg.value` is enough to pay for the servicefee and the nft cost._
+- _Used by the methods [`bid`]( "Link to bid"), [`executeOrder`]( "Link to executeOrder")._
+
+```javascript
+    modifier costs(uint status, bytes32 id) {
+        if (status == 1 || status == 2) {
+            if (status == 1) {
+                MarketOrder memory _order = ordersMapping[id];
+                (uint256 serviceAmount, uint256 sellerAmount, ) = _calculateFees(
+                    _order.priceInWei
+                );
+                uint256 sum = (_order.priceInWei + serviceAmount);
+                if (msg.value < sum) revert LowValue(sum);
+            } else {
+                MarketAuction memory _auction = auctionsMapping[id];
+                (uint serviceAmount, uint sellerAmount, ) = _calculateFees(
+                    _auction.highestBid
+                );
+                uint sum = (_auction.highestBid + serviceAmount);
+                if (msg.value < sum) revert LowValue(sum);
+            }
+        } else {
+            revert ErrorMessage("Wrong Status");
+        }
+        _;
+    }
+```  
+
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :-------------------------     |
+| `status`  | `uint`   | _1 is MarketOrder / 2 is MarketAuction._|
+| `id`      | `bytes32`| _The id of the Order or Auction._|
 
 ---

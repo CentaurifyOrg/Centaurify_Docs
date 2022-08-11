@@ -31,12 +31,15 @@ _Features supported by this smart contract._
 
 - [Supported features](Supported_features.md#supported-features) 
 
-### [Contract Modifiers](Modifiers.md#contract-modifiers)
+### Contract Modifiers
 
 > _Modifiers used to validate method parameters in the Marketplace smart contract._
 
-- [Modifiers](Modifiers.md#phase-modifiers)
+- [Modifiers](Modifiers.md#contract-modifiers)
 
-### [Contract Methods](#contract-methods)
+### Contract Methods
 
 > _Restricted admin methods and normal user methods in the marketplace smart contract._
+
+- [Contract methods](#contract-methods)
+
