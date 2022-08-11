@@ -1,8 +1,8 @@
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)
 
-| Product      | Type               | Description                |
-| :--------    | :-------           | :------------------------- |
-| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP        |
+| Product                     | Type                       | Description                                               |
+| :--------                   | :-------                   | :-------------------------                                |
+| Centaurify NFT Marketplace  | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
 
 ---
 
@@ -13,22 +13,19 @@
 - [Contract Modifiers](#contract-modifiers)
   - [Table of contents](#table-of-contents)
     - [Modifiers](#modifiers)
-        - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
-        - [`isAuthorized(itemId)`](#isauthorizeditemid)
-        - [`costs`](#costs)
+      - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
+      - [`isAuthorized(itemId)`](#isauthorizeditemid)
+      - [`costs`](#costs)
 
 <-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#table-of-contents "Back to Read-The-Docs")
 
 ### Modifiers
 
-
 > _The different modifiers is set to validate specific contract parameters to pass._  
 > _The modifiers validating the function calls in this smart contract._  
 > _Validates the correct status of the market item_.
 
-
-
-##### `isNotActive(bytes32 itemId)`  
+#### `isNotActive(bytes32 itemId)`
 
 - _Modifier `isNotActive` will validate that the marketItem is not already a live item._
 - _Parameter `itemId` The tokenId of the nft to validate._
@@ -36,7 +33,7 @@
 - _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
 
 ```javascript
-    /// @dev Modifier will validate that the marketItem is not already a live item.
+    /// @notice Modifier will validate that the marketItem is not already a live item.
     /// @param itemId The id of the marketItem.
     modifier isNotActive(bytes32 itemId) {
         MarketItem memory _item = itemsMapping[itemId];
@@ -51,14 +48,14 @@
 
 ---
 
-##### `isAuthorized(itemId)`  
+#### `isAuthorized(itemId)`  
 
-- _Modifier `isAuthorized` validates if the pre-mint phase3 has started._
+- _Modifier `isAuthorized` will validate if the caller is authorized._
 - _Used by the method [`createMarketOrder`]( "Link to createMarketOrder()")._
 - _Used by the method [`createMarketAuction`]("Link to createMarketAuction")._
 
 ```javascript
-    /// @dev Modifier will validate if the caller is authorized.
+    /// @notice Modifier will validate if the caller is authorized.
     /// @param itemId The tokenId of the nft to validate.
     modifier isAuthorized(bytes32 itemId) {
         MarketItem memory _item = itemsMapping[itemId];
@@ -73,7 +70,7 @@
 
 ---
 
-##### `costs`
+#### `costs`
 
 - _Modifier `costs` validates if `msg.value` is enough to pay for the servicefee and the nft cost._
 - _Used by the methods [`bid`]( "Link to bid"), [`executeOrder`]( "Link to executeOrder")._
@@ -105,7 +102,7 @@
 
 | Parameter | Type     | Description                    |
 | :-------- | :------- | :-------------------------     |
-| `status`  | `uint`   | _1 is MarketOrder / 2 is MarketAuction._|
+| `status`  | `uint`   | _Pass 1 for MarketOrder / Pass 2 for MarketAuction._|
 | `id`      | `bytes32`| _The id of the Order or Auction._|
 
 ---

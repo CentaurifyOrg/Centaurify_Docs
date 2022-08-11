@@ -32,7 +32,7 @@ This is the README for the CentArt [marketplace](https://github.com/CentaurifyOr
 
 ### Read The Docs - Centaurify Marketplace  
 
-See the [documentation](#readthedocs_marketplace.md), the [contracts](./contracts/NFT/Marketplace), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
+See the [documentation](ReadTheDocs_Marketplace.md#read-the-docs---marketplace), the [contracts](./contracts/NFT/Marketplace), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
 
 ## Deployments
 
