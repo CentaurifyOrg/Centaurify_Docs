@@ -1,39 +1,38 @@
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)  
 
-| Product                       | Type                       | Description                                               |
-  | :--------                   | :-------                   | :-------------------------                                |
-  | Centaurify NFT Marketplace  | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
-
+| Product                     | Type                       | Description                                               |
+| :--------                   | :-------                   | :-------------------------                                |
+| Centaurify NFT Marketplace  | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
 
 ---
 
-# CentArt NFT Marketplace
+# README - Centaurify NFT Marketplace
 
-Centaurify is a live event and Music NFT universe. 
+This is the README for the CentArt [marketplace](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBaseMarketPlaceBETA.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.  
 
 ## Table of Contents
 
-- [CentArt NFT Marketplace](#centart-nft-marketplace)
+- [README - Centaurify NFT Marketplace](#readme---centaurify-nft-marketplace)
   - [Table of Contents](#table-of-contents)
-  - [Description](#description)
+  - [Introduction](#introduction)
+    - [Read The Docs - Centaurify Marketplace](#read-the-docs---centaurify-marketplace)
   - [Deployments](#deployments)
   - [Install](#install)
-  - [Usage](#usage)
+    - [Usage](#usage)
   - [Audits](#audits)
   - [Contributing](#contributing)
   - [License](#license)
 
-## Description
+## Introduction
 
 > Centaurify offers a music niched NFT marketplace and a full scale ticketing solution for live events.
 > By tokenizing tickets with NFT and Smart contract technology using a multi chain solution Centaurify will prevent scalping, fraud, and give the control of the secondary market back to the organisers and artists.
 > Built by artists for artists.  
->Empowering Music!  
+> Empowering Music!  
 
+### Read The Docs - Centaurify Marketplace  
 
-### Read The Docs - Centaurify Marketplace. 
-
-See the [documentation](.), the [contracts](./contracts/NFT/), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
+See the [documentation](.), the [contracts](./contracts/NFT/Marketplace), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
 
 ## Deployments
 

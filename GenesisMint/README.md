@@ -10,9 +10,7 @@
 
 This is the README for the [GenesisMint](GenesisMint.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.
 
-
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-
 
 ## Introduction
 
@@ -36,7 +34,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ## Documentation
 
-- [Read The Docs](ReadTheDocs_Genesis_Mint.md#read-the-docs---genesis-mint "Genesis Mint README")
+- [Read The Docs](ReadTheDocs_Genesis_Mint.md#read-the-docs---genesis-mint "Genesis Mint READTHEDOCS")
 
 
 ## Instructions
