@@ -1,3 +1,12 @@
+![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)  
+
+| Product                       | Type                       | Description                                               |
+  | :--------                   | :-------                   | :-------------------------                                |
+  | Centaurify NFT Marketplace  | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
+
+
+---
+
 # CentArt NFT Marketplace
 
 Centaurify is a live event and Music NFT universe. 
@@ -16,30 +25,33 @@ Centaurify is a live event and Music NFT universe.
 
 ## Description
 
-Centaurify offers a music niched NFT marketplace and a full scale ticketing solution for live events.  
+> Centaurify offers a music niched NFT marketplace and a full scale ticketing solution for live events.
+> By tokenizing tickets with NFT and Smart contract technology using a multi chain solution Centaurify will prevent scalping, fraud, and give the control of the secondary market back to the organisers and artists.
+> Built by artists for artists.  
+>Empowering Music!  
 
-By tokenizing tickets with NFT and Smart contract technology using a multi chain solution Centaurify will prevent scalping, fraud, and give the control of the secondary market back to the organisers and artists.  
 
-Built by artists for artists.  
-Empowering Music!
+### Read The Docs - Centaurify Marketplace. 
 
-See the [documentation](docs/), the [contracts](./contracts/NFT/), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
+See the [documentation](.), the [contracts](./contracts/NFT/), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
 
 ## Deployments
 
-CentBaseMarketplaceBETA.sol deployment addresses:
+[CentBaseMarketplaceBETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBaseMarketPlaceBETA.sol) deployment addresses:
 
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
-| Goerli           | []() |
+| Mumbai           | []() |
 
-CentBase721BETA.sol deployment addresses:
+
+[CentBase721BETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBASE721BETA.SOL) deployment addresses:
 
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
 | Mumbai testnet   | [0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3](https://mumbai.polygonscan.com/address/0xedC9Bb1F129E0B2682170535b3cA349C3Dff39A3#code) |
+
 
 CentBaseWhitelistBETA.sol deployment addresses:
 
@@ -54,6 +66,7 @@ CentBaseRoyaltySplitterBETA.sol deployment addresses:
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
 | Goerli           | []() |
+
 
 ## Install
 
