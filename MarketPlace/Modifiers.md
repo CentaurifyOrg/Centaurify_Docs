@@ -19,6 +19,8 @@
 
 <-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#table-of-contents "Back to Read-The-Docs")
 
+---
+
 ### Modifiers
 
 > _The different modifiers is set to validate specific contract parameters to pass._  
@@ -45,7 +47,6 @@
 | :-------- | :------- | :-------------------------     |
 | `itemId`      | `bytes32`| _The itemId._|  
 
----
 
 #### `isNotActive(bytes32 itemId)`
 
@@ -68,7 +69,6 @@
 | :-------- | :------- | :-------------------------     |
 | `itemId`      | `bytes32`| _The itemId._|  
 
----
 
 #### `costs`
 

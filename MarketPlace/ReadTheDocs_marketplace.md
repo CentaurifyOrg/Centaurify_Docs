@@ -31,6 +31,8 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ---  
 
+<-- Back to [ReadTheDocs](ReadTheDocs_marketplace.md#table-of-contents "Back to ReadTheDocs")
+
 #### How To Use The Marketplace
 
 _This marketplace smart contract will allow pre-approved artists to create a market item to list at our marketplace, the artist can then sell the listed item for a **fixed price** or for the highest price in a **timed auction**._
@@ -41,7 +43,7 @@ This documentation will go through the different steps listed below.
 
 > Creating a market item is the process of preparing an NFT to be sold for a fixed price or as a timed auction.
 
-- [Read about market items.](MarketItems.md#market-items "Link to description of market items.")
+- [Read more about market items.](MarketItems.md#market-items "Link to description of market items.")
 
 #### Market Order
 
@@ -69,5 +71,5 @@ _Modifiers used to validate method parameters in the marketplace smart contract.
 
 _Restricted admin methods and normal user methods in the marketplace smart contract._
 
-- [Contract methods](#contract-methods)
+- [MarketItem methods](MarketItems#market-item-methods)
 
