@@ -68,5 +68,6 @@ _Modifiers used to validate method parameters in the marketplace smart contract.
 
 _Restricted admin methods and normal user methods in the marketplace smart contract._
 
-- [MarketItem methods](MarketItems#market-item-methods)
+- [MarketItem methods](MarketItems.md#market-item-methods)  
 
+- [Admin methods](Admin_methods.md#admin-methods)  
