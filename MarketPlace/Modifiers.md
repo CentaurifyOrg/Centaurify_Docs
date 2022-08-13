@@ -1,13 +1,12 @@
 ![Logo](https://www.centaurify.com/_next/image?url=%2Fimg%2Flogo%2Fcentaurify-logo.svg&w=1920&q=75)
 
-| Product                     | Type                       | Description                                               |
-| :--------                   | :-------                   | :-------------------------                                |
-| Centaurify NFT Marketplace  | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
+| Product                     | Type                       | Description                                     |
+| :--------                   | :-------                   | :-------------------------                      |
+| Centaurify NFT Marketplace  | Marketplace Smart Contract | This is the Base NFT Marketplace smart contract |
 
 ---
 
 # Contract Modifiers
-
 
 - [Contract Modifiers](#contract-modifiers)
   - [Modifiers](#modifiers)
@@ -15,7 +14,7 @@
     - [`isNotActive(bytes32 itemId)`](#isnotactivebytes32-itemid)
     - [`costs`](#costs)
 
-<-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#table-of-contents "Back to Read-The-Docs")
+<-- Back to [Read-The-Docs](ReadTheDocs_marketplace.md#introduction "Back to Read-The-Docs")
 
 ---
 

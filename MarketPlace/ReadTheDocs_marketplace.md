@@ -24,7 +24,7 @@ This is the official documentation for the [Marketplace](https://github.com/Cent
 
 ---  
 
-<-- Back to [ReadTheDocs](ReadTheDocs_marketplace.md#table-of-contents "Back to ReadTheDocs")
+<-- Back to [ReadTheDocs](README.md#readme---centaurify-nft-marketplace "Back to ReadTheDocs")
 
 ## Introduction
 

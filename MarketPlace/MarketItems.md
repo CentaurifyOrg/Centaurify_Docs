@@ -3,7 +3,7 @@
 
 | Product                | Type                       | Description                                               |
 | :--------------------- | :------------------------- | :-------------------------------------------------------- |
-| Centaurify NFT product | Marketplace Smart Contract | Used by the CentArt NFT Marketplace to mint ERC721 tokens |
+| Centaurify NFT Marketplace  | Marketplace Smart Contract | This is the Base NFT Marketplace smart contract |
 
 ---
 
