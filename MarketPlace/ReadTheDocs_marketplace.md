@@ -46,7 +46,7 @@ This documentation will go through the different steps listed below.
 
 > Creating a market order is to sell a market item for a pre-set fixed price.
 
-- [Read about market orders.](MarketOrder.md#create-an-market-order "Link to description of market orders.")
+- [Read about market orders.](MarketOrders.md#create-an-market-order "Link to description of market orders.")
 
 ### Market Auction
 
@@ -68,6 +68,9 @@ _Modifiers used to validate method parameters in the marketplace smart contract.
 
 _Restricted admin methods and normal user methods in the marketplace smart contract._
 
-- [MarketItem methods](MarketItems.md#market-item-methods)  
-
 - [Admin methods](Admin_methods.md#admin-methods)  
+
+- [Market Item methods](MarketItems.md#market-item-methods)  
+
+- [Market Order methods](MarketOrders.md#market-order-methods)  
+
