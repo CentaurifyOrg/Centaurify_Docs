@@ -12,46 +12,43 @@ This is the official documentation for the [Marketplace](https://github.com/Cent
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-## Introduction
-
-Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.
-
-### Table Of Contents
-
 - [CentArt Marketplace - Read The Docs](#centart-marketplace---read-the-docs)
   - [Introduction](#introduction)
-    - [Table Of Contents](#table-of-contents)
-      - [How To Use The Marketplace](#how-to-use-the-marketplace)
-      - [Market Item](#market-item)
-      - [Market Order](#market-order)
-      - [Market Auction](#market-auction)
-    - [Smart Contract](#smart-contract)
-      - [Contract Modifiers](#contract-modifiers)
-      - [Contract Methods](#contract-methods)
+  - [How To Use The Marketplace](#how-to-use-the-marketplace)
+    - [Market Item](#market-item)
+    - [Market Order](#market-order)
+    - [Market Auction](#market-auction)
+  - [Smart Contract](#smart-contract)
+    - [Contract Modifiers](#contract-modifiers)
+    - [Contract Methods](#contract-methods)
 
 ---  
 
 <-- Back to [ReadTheDocs](ReadTheDocs_marketplace.md#table-of-contents "Back to ReadTheDocs")
 
-#### How To Use The Marketplace
+## Introduction
+
+Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.  
+
+## How To Use The Marketplace
 
 _This marketplace smart contract will allow pre-approved artists to create a market item to list at our marketplace, the artist can then sell the listed item for a **fixed price** or for the highest price in a **timed auction**._
 
 This documentation will go through the different steps listed below.  
 
-#### Market Item
+### Market Item
 
 > Creating a market item is the process of preparing an NFT to be sold for a fixed price or as a timed auction.
 
 - [Read more about market items.](MarketItems.md#market-items "Link to description of market items.")
 
-#### Market Order
+### Market Order
 
 > Creating a market order is to sell a market item for a pre-set fixed price.
 
 - [Read about market orders.](MarketOrder.md#create-an-market-order "Link to description of market orders.")
 
-#### Market Auction
+### Market Auction
 
 > Creating a market auction is to sell a market item at a timed auction.
 
@@ -59,15 +56,15 @@ This documentation will go through the different steps listed below.
 
 ---  
 
-### Smart Contract  
+## Smart Contract  
 
-#### Contract Modifiers
+### Contract Modifiers
 
 _Modifiers used to validate method parameters in the marketplace smart contract._
 
 - [Modifiers](Modifiers.md#contract-modifiers)
 
-#### Contract Methods
+### Contract Methods
 
 _Restricted admin methods and normal user methods in the marketplace smart contract._
 

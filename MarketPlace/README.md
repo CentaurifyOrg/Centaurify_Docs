@@ -10,18 +10,16 @@
 
 This is the README for the CentArt [marketplace](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBaseMarketPlaceBETA.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.  
 
-## Table of Contents
 
 - [README - Centaurify NFT Marketplace](#readme---centaurify-nft-marketplace)
-  - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
     - [Read The Docs - Centaurify Marketplace](#read-the-docs---centaurify-marketplace)
-  - [Deployments](#deployments)
-  - [Install](#install)
-    - [Usage](#usage)
-  - [Audits](#audits)
-  - [Contributing](#contributing)
-  - [License](#license)
+    - [Deployments](#deployments)
+    - [Install](#install)
+      - [Usage](#usage)
+    - [Audits](#audits)
+    - [Contributing](#contributing)
+    - [License](#license)
 
 ## Introduction
 
@@ -34,7 +32,7 @@ This is the README for the CentArt [marketplace](https://github.com/CentaurifyOr
 
 See the [documentation](ReadTheDocs_marketplace.md#introduction), the [contracts](./contracts/NFT/Marketplace), and the full [documentation](https://) for more information on Centaurify and the CentArt platform.
 
-## Deployments
+### Deployments
 
 [CentBaseMarketplaceBETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBaseMarketPlaceBETA.sol) deployment addresses:
 
@@ -67,7 +65,7 @@ CentBaseRoyaltySplitterBETA.sol deployment addresses:
 | Goerli           | []() |
 
 
-## Install
+### Install
 
 To install dependencies and compile contracts:
 
@@ -77,7 +75,7 @@ yarn
 yarn compile
 ```
 
-### Usage
+#### Usage
 
 **To run hardhat tests written in javascript:**
 
@@ -103,11 +101,11 @@ Terminal two:
 yarn deploy_local_nft
 ```
 
-## Audits
+### Audits
 
 input an aduit text here.
 
-## Contributing
+### Contributing
 
 Contributions to CentArt are welcome by anyone interested in writing more tests, improving readability, optimizing for gas efficiency, or extending the protocol via new zone contracts or other features.
 
@@ -125,6 +123,6 @@ When making a pull request, ensure that:
 - If making a modification to third-party dependencies, `yarn audit` passes.
 - A descriptive summary of the PR has been provided.
 
-## License
+### License
 
 [MIT](LICENSE) © 2022 Centaurify / Viken Blockchain Solutions.
