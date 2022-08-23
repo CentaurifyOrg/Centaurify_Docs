@@ -32,8 +32,18 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ## [Supported Features](Supported_features.md#supported-features)
 
-> _Features supported by this smart contract._
+> _Features supported by the Genesis Mint smart contract._
 
+- _Build on the ERC721A smart contract from [ChiruLabs](https://www.erc721a.org/) for cheaper batch minting and better fee optimization_
+- _Support ERC2981 - Royalty Standard with the { [royaltyInfo](https://eips.ethereum.org/EIPS/eip-2981) } method._
+- _Support OpenSea's { [contractURI](https://docs.opensea.io/docs/contract-level-metadata) } method for query contract metadata._
+- _Whitelisted accounts by using MerkleTree validation._
+- _Three Pre-Mint Phases._
+- _One Public Mint Phase._
+- _Early reveal feature._  
+- _REVEAL feature._
+
+---
 ## [Contract Modifiers](Modifiers.md#contract-modifiers)
 
 > _Modifiers used to validate method parameters in the Genesis Mint smart contract._
