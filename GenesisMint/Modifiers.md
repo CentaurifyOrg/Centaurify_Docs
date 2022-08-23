@@ -36,7 +36,7 @@ _The modifiers in this smart contract are described below._
 >
 > - Validates the correct status of the contract.
 > - Validates that the phase specific `startTimestamp` is set.
-> - Validates if the current `block.timestamp` is within the phase specific `startTimestamp` and `endTimestamp`.  
+> - Validates if the current `block.timestamp` is within the phase specific `startTimestamp`.  
 
 ##### `phaseOneIsOpen`  
 
@@ -49,10 +49,7 @@ _The modifiers in this smart contract are described below._
 modifier phaseOneIsOpen() {
   uint currentTime = block.timestamp;
   if (status != Status.Phase1) revert Code_1(status, Status.Phase1);
-  if (
-      currentTime <= phase1StartTimestamp ||
-      currentTime >= phase1EndTimestamp
-  ) revert Code_2(phase1StartTimestamp);
+  if (currentTime <= startTimestamp) revert Code_2(startTimestamp);
 
   if (phase1StartTimestamp == 0) revert Code_2(phase1StartTimestamp);
   _;
@@ -72,12 +69,9 @@ modifier phaseOneIsOpen() {
 modifier phaseTwoIsOpen() {
   uint currentTime = block.timestamp;
   if (status != Status.Phase2) revert Code_1(status, Status.Phase2);
-  if (
-      currentTime <= phase2StartTimestamp ||
-      currentTime >= phase2EndTimestamp
-  ) revert Code_2(phase2StartTimestamp);
+  if (currentTime <= startTimestamp) revert Code_2(startTimestamp);
 
-  if (phase2StartTimestamp == 0) revert Code_2(phase2StartTimestamp);
+  if (startTimestamp == 0) revert Code_2(startTimestamp);
   _;
 }
 ```  
@@ -93,12 +87,9 @@ modifier phaseTwoIsOpen() {
 modifier phaseThreeIsOpen() {
   uint currentTime = block.timestamp;
   if (status != Status.Phase3) revert Code_1(status, Status.Phase3);
-  if (
-      currentTime <= phase3StartTimestamp ||
-      currentTime >= phase3EndTimestamp
-  ) revert Code_2(phase3StartTimestamp);
+  if (currentTime <= startTimestamp) revert Code_2(startTimestamp);
 
-  if (phase3StartTimestamp == 0) revert Code_2(phase3StartTimestamp);
+  if (startTimestamp == 0) revert Code_2(startTimestamp);
   _;
 }
 ```  
@@ -116,12 +107,9 @@ modifier phaseThreeIsOpen() {
 modifier publicMintIsOpen() {
   uint currentTime = block.timestamp;
   if (status != Status.Public) revert Code_1(status, Status.Public);
-  if (
-      currentTime <= publicStartTimestamp ||
-      currentTime >= publicEndTimestamp
-  ) revert Code_2(publicStartTimestamp);
+  if (currentTime <= startTimestamp) revert Code_2(startTimestamp);
 
-  if (publicStartTimestamp == 0) revert Code_2(publicStartTimestamp);
+  if (startTimestamp == 0) revert Code_2(startTimestamp);
   _;
 }
 ```  
@@ -141,10 +129,8 @@ modifier earlyRevealIsOpen() {
   if (status != Status.EarlyReveal) 
     revert Code_1(status, Status.EarlyReveal);
   
-  if (currentTime <= earlyRevealTimestamp) 
-    revert Code_2(earlyRevealTimestamp);
- 
- if (earlyRevealTimestamp == 0) revert Code_2(earlyRevealTimestamp);
+  if (currentTime <= startTimestamp) revert Code_2(startTimestamp);
+  if (startTimestamp == 0) revert Code_2(startTimestamp);
   _;
 }
 ```  
