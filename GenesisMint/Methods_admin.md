@@ -24,14 +24,19 @@
         - [`setPublicMintValues`](#setpublicmintvalues)
         - [`setEarlyRevealValues`](#setearlyrevealvalues)
         - [`setRevealValues`](#setrevealvalues)
+      - [Other Methods](#other-methods)
+        - [`setRecipient`](#setrecipient)
+        - [`setMaxItemsPerTx`](#setmaxitemspertx)
 
 <-- Back to [readthedocs](ReadTheDocs_Genesis_Mint.md#table-of-contents "Back to ReadTheDocs")
+
+---  
 
 ### Admin Methods
 
 > _The methods below can only be called by the **OWNER** account._
 
----
+
 
 #### Set URI Methods
 
@@ -52,7 +57,7 @@ function setBaseTokenURI(string memory __baseTokenURI) public onlyOwner {
 | :--------        | :-------  | :------------------------- |
 | `__baseTokenURI` | `string`  | _The base Url for the NFTs of this Genesis Mint contract._ |  
 
----
+
 
 ##### `setGoldenTicketURI`
 
@@ -71,7 +76,7 @@ function setGoldenTicketURI(string memory __goldenTicketURI) public onlyOwner {
 | :--------        | :-------  | :------------------------- |
 | `__goldenTicketURI` | `string`  | _The URI for the GoldenTicket.mp4 asset used for this Genesis Mint._|
 
----
+
 
 ##### `setContractURI`  
 
@@ -112,7 +117,7 @@ function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) 
 | `_phase1StartTimestamp` | `uint`  | _The timestamp to start the premint Phase 1._|
 | `_merkleRoot` | `bytes32`  | _The merkleroot of the Phase1 whitelist to mint from._|
 
----
+
 
 ##### `setPhaseTwoMintValues`  
 
@@ -120,7 +125,6 @@ function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) 
 - _Restricted by modifier `phaseOneIsOpen`._
 - _Make sure the `_goldenTicketURI` is set before `setPhaseTwoMintValues`, and the pre-mint phase 2 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
-
 
 
 ```javascript
@@ -132,7 +136,7 @@ function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) 
 | `_phase2StartTimestamp` | `uint`    | _The timestamp to start the premint Phase 2._|
 | `_merkleRoot`           | `bytes32` | _The merkleroot of the Phase2 whitelist to mint from._|
 
----
+
 
 ##### `setPhaseThreeMintValues`  
 
@@ -152,7 +156,7 @@ function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot
 | `_phase3StartTimestamp` | `uint`    | _The timestamp to start the premint Phase 3._|
 | `_merkleRoot`           | `bytes32` | _The merkleroot of the Phase3 whitelist to mint from._|
 
----
+
 
 ##### `setPublicMintValues`
 
@@ -170,13 +174,12 @@ function setPublicMintValues(uint _publicStartTimestamp) external onlyOwner phas
 | :--------               | :-------  | :-------------------------                     |
 | `_publicStartTimestamp` | `uint`    | _The timestamp to start the public mint phase._|
 
----
 
 ##### `setEarlyRevealValues`  
 
 - _Will initiate the EarlyReveal phase._ 
 - _Restricted by modifier `publicMintIsOpen`._
-- _Will allow GoldenTicket holders to initiate early reveal of their PFP._
+- _Will allow GoldenTicket holders to initiate an early reveal of their PFP._
 
 ```javascript
 function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner publicMintIsOpen {}
@@ -185,8 +188,8 @@ function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner pub
 | Parameter               | Type      | Description                                     |
 | :--------               | :-------  | :-------------------------                      |
 | `_earlyRevealTimestamp` | `uint`    | _The timestamp to start the early reveal phase._|
+| `_uriSuffix` | `string`    | _The uri suffix of the pfp metadata._|
 
----
 
 ##### `setRevealValues`  
 
@@ -200,5 +203,32 @@ function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner pub
  }
  ```
 
+---
+
+#### Other Methods  
+
+##### `setRecipient`  
+
+- _Update the recipient address._  
+- _Restricted to `owner` account._
+- _Will update the `recipient` account to receive the withdrawn funds._
+
+```javascript
+  function setRecipient(address payable _recipient) external onlyOwner {
+      recipient = _recipient;
+  }
+ ```  
+
+##### `setMaxItemsPerTx`  
+
+- _Update the maxItemsPerTx._  
+- _Restricted to `owner` account._
+- _Will update the `maxItemsPerTx` value._
+
+```javascript
+   function setMaxItemsPerTx(uint _maxItemsPerTx) external onlyOwner {
+        maxItemsPerTx = _maxItemsPerTx;
+    }
+ ```
 
 ---

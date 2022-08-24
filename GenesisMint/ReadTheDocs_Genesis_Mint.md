@@ -74,6 +74,6 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 > _This page will give a description of the two main workflows for the Genesis Mint smart contract._
 
-### [Admin Flow](WorkFlows.md#admin-flow)
+### [Admin Flow](Flow_admin.md#admin-flow)
 
 ### [User Flow](WorkFlows.md#user-flow)

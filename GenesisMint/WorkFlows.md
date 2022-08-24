@@ -15,20 +15,17 @@
 
 - [Workflows](#workflows)
   - [Table of content](#table-of-content)
-    - [Admin flow](#admin-flow)
-      - [Admin Usage](#admin-usage)
-    - [User flow](#user-flow)
+    - [Admin WorkFlow](#admin-workflow)
+    - [User WorkFlow](#user-workflow)
       - [User Usage](#user-usage)
 
 <-- Back to [ReadTheDocs](ReadTheDocs_Genesis_Mint.md#table-of-contents "Back to ReadTheDocs")
 
-### Admin flow
+### [Admin WorkFlow](./Flow_admin.md#admin-flow "The admin workflow page.")
 
 _This flow will describe the Admin flow for completing all phases of this Genesis Mint and the methods available to this contracts Owner account._
 
-#### Admin Usage
-
-### User flow
+### User WorkFlow
 
 _This flow will describe the Admin flow for completing all phases of this Genesis Mint and the methods available to this contracts Owner account._
 
