@@ -39,7 +39,7 @@ See the [documentation](ReadTheDocs_marketplace.md#introduction), the [contracts
 | Network          | Address                                    |
 | ---------------- | ------------------------------------------ |
 | Ethereum Mainnet | []() |
-| Mumbai           | []() |
+| Goerli           | [0x67B5b22098B00161bcF4b811EC1c794692A6fdb5](https://goerli.etherscan.io/address/0x67b5b22098b00161bcf4b811ec1c794692a6fdb5) |
 
 
 [CentBase721BETA.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/Marketplace/CentBASE721BETA.SOL) deployment addresses:
