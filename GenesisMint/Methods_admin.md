@@ -100,6 +100,9 @@ function setContractURI(string memory __contractURI) public onlyOwner {
 
 #### Set Phase Methods
 
+| Pre-Mint Phase One | Pre-Mint Phase Two | Pre-Mint Phase Three | Public Mint | Early Reveal | Reveal |
+|:------------------ | :----------------- | :------------------- | :---------- | :----------- | :----- |
+
 ##### `setPhaseOneMintValues`  
 
 - _Will initiate the pre-mint phase 1._
