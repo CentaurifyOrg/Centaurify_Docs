@@ -2,7 +2,7 @@
 
 | Product      | Type               | Description                |
 | :--------    | :-------           | :------------------------- |
-| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP        |
+| Genesis Mint | NFT Smart Contract | Collection AAA        |
 
 ---
 
@@ -15,7 +15,6 @@
     - [Admin Methods](#admin-methods)
       - [Set URI Methods](#set-uri-methods)
         - [`setBaseTokenURI`](#setbasetokenuri)
-        - [`setGoldenTicketURI`](#setgoldenticketuri)
         - [`setContractURI`](#setcontracturi)
       - [Set Phase Methods](#set-phase-methods)
         - [`setPhaseOneMintValues`](#setphaseonemintvalues)
@@ -34,11 +33,11 @@
 
 ### Admin Methods
 
-> _The methods below can only be called by the **OWNER** account._
+> _The methods below can only be called by the **ADMIN_ROLE** account._
 
 
 
-#### Set URI Methods
+#### **Set URI Methods**
 
 ##### `setBaseTokenURI`  
 
@@ -56,26 +55,6 @@ function setBaseTokenURI(string memory __baseTokenURI) public onlyOwner {
 | Parameter        | Type      | Description                |
 | :--------        | :-------  | :------------------------- |
 | `__baseTokenURI` | `string`  | _The base Url for the NFTs of this Genesis Mint contract._ |  
-
-
-
-##### `setGoldenTicketURI`
-
-- _Will set the `_goldenTicketURI` for this contract._
-- _The `_goldenTicketURI` is used as the pre-reveal asset for the NFTs in this GenesisMint._  
-- _The `_goldenTicketURI` has to be set before `setPhaseOneMintValues`, and the pre-mint phase 1 starts._
-- _Example of `_goldenTicketURI`: ["https://gateway.moralisipfs.com/ipfs/QmYVdmyWpFwfKfjXbYNheykFQPMY3roH2TWYLAnLaSCRnG"](QmYVdmyWpFwfKfjXbYNheykFQPMY3roH2TWYLAnLaSCRnG)_
-
-```javascript
-function setGoldenTicketURI(string memory __goldenTicketURI) public onlyOwner {
-  _goldenTicketURI = __goldenTicketURI;
-}
-```
-
-| Parameter        | Type      | Description                |
-| :--------        | :-------  | :------------------------- |
-| `__goldenTicketURI` | `string`  | _The URI for the GoldenTicket.mp4 asset used for this Genesis Mint._|
-
 
 
 ##### `setContractURI`  
@@ -98,16 +77,18 @@ function setContractURI(string memory __contractURI) public onlyOwner {
 
 ---
 
-#### Set Phase Methods
+#### **Set Phase Methods**
+
+_There are six different stages/phases in this Genesis Mint, the phases are listed below._
 
 | Pre-Mint Phase One | Pre-Mint Phase Two | Pre-Mint Phase Three | Public Mint | Early Reveal | Reveal |
 |:------------------ | :----------------- | :------------------- | :---------- | :----------- | :----- |
+
 
 ##### `setPhaseOneMintValues`  
 
 - _Will initiate the pre-mint phase 1._
 - _Make sure the `_baseTokenURI` is set before `setPhaseOneMintValues`, and the pre-mint phase 1 starts._
-- _Make sure the `_goldenTicketURI` is set before `setPhaseOneMintValues`, and the pre-mint phase 1 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
 
 
@@ -126,7 +107,6 @@ function setPhaseOneMintValues(uint _phase1StartTimestamp, bytes32 _merkleRoot) 
 
 - _Will initiate the pre-mint phase 2._  
 - _Restricted by modifier `phaseOneIsOpen`._
-- _Make sure the `_goldenTicketURI` is set before `setPhaseTwoMintValues`, and the pre-mint phase 2 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
 
 
@@ -145,7 +125,6 @@ function setPhaseTwoMintValues(uint _phase2StartTimestamp, bytes32 _merkleRoot) 
 
 - _Will initiate the pre-mint phase 3._
 - _Restricted by modifier `phaseTwoIsOpen`._
-- _Make sure the `_goldenTicketURI` is set before `setPhaseThreeMintValues`, and the pre-mint phase 3 starts._
 - _Use [generate_merkle_root.js](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/scripts/generate_merkle_root.js "Script to generate the merkle root") to generate the `bytes32 merkleRoot` for each phase._
 
 
@@ -166,7 +145,6 @@ function setPhaseThreeMintValues(uint _phase3StartTimestamp, bytes32 _merkleRoot
 - _Will initiate the public mint phase._  
 - _Restricted by modifier `phaseThreeIsOpen`._
 - _Make sure the `_baseTokenURI` is set before `setPublicMintValues`, and the public mint phase starts._
-- _Make sure the `_goldenTicketURI` is set before `setPublicMintValues`, and the public mint phase starts._
 
 
 ```javascript
@@ -191,7 +169,6 @@ function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner pub
 | Parameter               | Type      | Description                                     |
 | :--------               | :-------  | :-------------------------                      |
 | `_earlyRevealTimestamp` | `uint`    | _The timestamp to start the early reveal phase._|
-| `_uriSuffix` | `string`    | _The uri suffix of the pfp metadata._|
 
 
 ##### `setRevealValues`  
@@ -208,11 +185,11 @@ function setEarlyRevealValues(uint _earlyRevealTimestamp) external onlyOwner pub
 
 ---
 
-#### Other Methods  
+#### **Other Methods**  
 
 ##### `setRecipient`  
 
-- _Update the recipient address._  
+- _Update the recipient address._
 - _Restricted to `owner` account._
 - _Will update the `recipient` account to receive the withdrawn funds._
 

@@ -2,13 +2,13 @@
 
 | Product      | Type               | Description                |
 | :--------    | :-------           | :------------------------- |
-| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP |
+| Genesis Mint | NFT Smart Contract | Collection AAA |
 
 ---
 
 # README - Genesis Mint Smart Contract
 
-This is the README for the [GenesisMint](GenesisMint.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.
+This is the README for the [GenesisMint](https://github.com/Centaurifly/ethereum_repository/blob/merge_genesis_mint/smart_contracts/contracts/nft/genesis_mint/GenesisMint.sol) smart contract, developed for [Centaurify](https://www.centaurify.com), by the [Viken Blockchain Solutions](https://www.vikenblockchain.com) team.
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
@@ -43,10 +43,10 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 ### Clone the project
 
   ```bash
-    git clone https://github.com/CentaurifyOrg/smart_contracts.git
+    git clone https://github.com/Centaurifly/ethereum_repository.git
   ```
 
-- Go to the project directory
+- Go to the projects smart contract directory
 
   ```bash
     cd smart_contracts
@@ -68,7 +68,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 - Manually re-compile the contracts only after changes to the smart-contracts.  
 
   ```bash
-    yarn compile
+    yarn build
   ```  
 
 
@@ -81,7 +81,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
   - Spin up a local node.  
   
   ```bash
-    yarn ganache
+    yarn node
   ```
 
   **In terminal two:**  
@@ -110,10 +110,11 @@ _______________________________________
 
 These smart contracts are part of GenesisMint.
 
-- [GenesisMint.sol](https://github.com/CentaurifyOrg/smart_contracts/blob/main/contracts/NFT/GenesisMint/GenesisMint.sol "Main NFT Smart-contract")
+- [GenesisMint.sol](https://github.com/Centaurifly/ethereum_repository/blob/merge_genesis_mint/smart_contracts/contracts/nft/genesis_mint/GenesisMint.sol "Main NFT Smart-contract")
+
+- [GenesisStorage.sol](https://github.com/Centaurifly/ethereum_repository/blob/merge_genesis_mint/smart_contracts/contracts/nft/genesis_mint/GenesisStorage.sol "Genesis storage Smart-contract")
 
 
 ## 🧑‍⚖️ Authors
 
 - [@dadogg80](https://www.github.com/dadogg80)
-

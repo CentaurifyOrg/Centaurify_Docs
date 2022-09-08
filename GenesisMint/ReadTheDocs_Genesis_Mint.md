@@ -2,13 +2,13 @@
 
 | Product       | Type               | Description                |
 | :--------     | :-------           | :------------------------- |
-| Genesis Mint  | NFT Smart Contract | GoldenTicket  - PFP        |
+| Genesis Mint  | NFT Smart Contract | Collection AAA      |
 
 ---
 
 # Genesis Mint - Read The Docs
 
-This is the official documentation for the [GenesisMint](GenesisMint.sol) smart contract developed by [Viken Blockchain Solutions](https://www.vikenblockchain.com) for [Centaurify](https://www.centaurify.com).
+This is the official documentation for the [GenesisMint](Ghttps://github.com/Centaurifly/ethereum_repository/blob/merge_genesis_mint/smart_contracts/contracts/nft/genesis_mint/GenesisMint.sol) smart contract developed by [Viken Blockchain Solutions](https://www.vikenblockchain.com) for [Centaurify](https://www.centaurify.com).
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
@@ -28,7 +28,6 @@ Be part of the next generation music scene, with the most exclusive web3 music c
     - [User Methods](#user-methods)
   - [Workflows](#workflows)
     - [Admin Flow](#admin-flow)
-    - [User Flow](#user-flow)
 
 ## [Supported Features](Supported_features.md#supported-features)
 
@@ -75,5 +74,3 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 > _This page will give a description of the two main workflows for the Genesis Mint smart contract._
 
 ### [Admin Flow](Flow_admin.md#admin-flow)
-
-### [User Flow](WorkFlows.md#user-flow)
