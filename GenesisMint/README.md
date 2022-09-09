@@ -14,7 +14,28 @@ This is the README for the [GenesisMint](https://github.com/Centaurifly/ethereum
 
 ## Introduction
 
-Be part of the next generation music scene, with the most exclusive web3 music community and social club in the solar system.
+
+_**Genesis mint** is an NFT Collection smart contract. It utilizes the new ERC721A library developed by the [AZUKI](https://www.azuki.com/) team on behalf of Chiru Labs.  [erc721a docs](https://chiru-labs.github.io/ERC721A/#/ "ERC721A documentation")_
+
+**Genesis Mint - Collection AAA** is the first NFT Collection launched by the Centaurify team. 
+- The smart contract has multiple pre-mint phases and a public mint phase. 
+- Each pre-mint phase utilizes whitelists and  MerkleProof verification by implementing  OpenZeppelins { MerkleProof.sol } contract. 
+- In the public mint phase, anyone can mint a preset amount of tokens.
+- After the public mint, we have two more phases. These phases are EarlyReveal and Reveal. The EarlyReveal phase will allow an nft holder to reveal their PFP avatar. 
+- The front-end and back-end servers manage all the API calls handling the metadata and the image files.   
+
+The concept is simple, before the EarlyReveal phase, all Collection AAA nft holders will see the GoldenTicket.m4 (below) as the NFT image until their unique PFP Avatar (below) is revealed. 
+
+<p>
+  <img id="img1" src="https://user-images.githubusercontent.com/41997352/188978593-a1b66272-8d90-43c1-a3ee-c7dd5472a527.png" height="150" alt="Golden Ticket">
+  <img src="https://user-images.githubusercontent.com/41997352/188979996-d2a871b0-d7a2-4893-a742-9149e0254dde.jpg" height="150" width= "150" alt="Sneek Peek">
+  <img src="https://user-images.githubusercontent.com/41997352/188979962-21728958-15bb-4b93-a17e-83217673643e.jpeg" height="150" width="150" alt="Sneek Peek">
+</p>
+
+By hodling the **Collection AAA** NFTs, the hodler will get many benefits within the Centaurify ecosystem. The benefits are, among other things, listing on our future marketplace with a 0% platform fee and more benefits. 
+
+For more information regarding the Genesis Mint and the benefits, read the Genesis Mint [pitch deck]( https://www.centaurify.com/files/FINAL%20NFT%20DECK%20f_compressed.pdf "Genesis Mint - Pitch Deck") and see the [landing page](https://www.centaurify.com/whitelist "Genesis Mint landing page.").
+
 
 ## Table of contents
 
