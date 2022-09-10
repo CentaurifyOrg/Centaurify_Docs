@@ -83,6 +83,7 @@ _There are six different stages/phases in this Genesis Mint, the phases are list
 
 | Pre-Mint Phase One | Pre-Mint Phase Two | Pre-Mint Phase Three | Public Mint | Early Reveal | Reveal |
 |:------------------ | :----------------- | :------------------- | :---------- | :----------- | :----- |
+| 16 hours| 16 hours | 16 hours | 2 weeks | Not Set| Not Set | | | | 
 
 
 ##### `setPhaseOneMintValues`  

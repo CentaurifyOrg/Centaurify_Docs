@@ -44,6 +44,9 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 
 ---
 
+
+## [Custom Errors](Custom_errors.md#custom-errors)
+
 ## [Contract Modifiers](Modifiers.md#contract-modifiers)
 
 > _Modifiers used to validate method parameters in the Genesis Mint smart contract._

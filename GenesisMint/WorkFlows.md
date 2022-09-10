@@ -2,7 +2,7 @@
 
 | Product       | Type | Description                |
 | :--------        | :-------       | :------------------------- |
-| Genesis Mint | NFT Smart Contract | GoldenTicket  - PFP |
+| Genesis Mint | NFT Smart Contract | Collection AAA |
 
 ---
 
