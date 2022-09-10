@@ -39,7 +39,7 @@ For more information regarding the Genesis Mint and the benefits, read the Genes
 
 ## Table of contents
 
-- [README - Genesis Mint Smart Contract](#readme---genesis-mint-smart-contract)
+- [📖 README - Genesis Mint Smart Contract](#readme---genesis-mint-smart-contract)
   - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
   - [Documentation](#documentation)
