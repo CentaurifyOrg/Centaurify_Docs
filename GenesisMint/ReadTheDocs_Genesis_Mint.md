@@ -22,6 +22,7 @@ Be part of the next generation music scene, with the most exclusive web3 music c
   - [Introduction](#introduction)
   - [Table Of Contents](#table-of-contents)
   - [Supported Features](#supported-features)
+  - [Custom Errors](#custom-errors)
   - [Contract Modifiers](#contract-modifiers)
   - [Contract Methods](#contract-methods)
     - [Admin Methods](#admin-methods)
@@ -45,9 +46,13 @@ Be part of the next generation music scene, with the most exclusive web3 music c
 ---
 
 
-## [Custom Errors](Custom_errors.md#custom-errors)
+## Custom Errors
 
-## [Contract Modifiers](Modifiers.md#contract-modifiers)
+> _Custom Errors are thrown when a function call is reverted._
+
+- [Custom Errors](Custom_errors.md#custom-errors)
+
+## Contract Modifiers
 
 > _Modifiers used to validate method parameters in the Genesis Mint smart contract._
 
